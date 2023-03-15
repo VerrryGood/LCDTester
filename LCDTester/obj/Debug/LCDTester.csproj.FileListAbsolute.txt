@@ -1,0 +1,15 @@
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\LCDTester.exe.config
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\LCDTester.exe
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\LCDTester.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.csproj.AssemblyReference.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.LCDTester.resources
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.Properties.Resources.resources
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.csproj.GenerateResource.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.csproj.CoreCompileInputs.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.exe
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\CustomControls.dll
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\CustomControls.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.csproj.CopyComplete
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\CommonLib.dll
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\CommonLib.pdb
