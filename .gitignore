@@ -1,2 +1,6 @@
 
 .vs/LCDTester/v16/.suo
+*.dll
+*.pdb
+*.cache
+*.exe

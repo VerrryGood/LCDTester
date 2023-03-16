@@ -19,7 +19,7 @@ namespace CommonLib
             public byte[] sourceIP;
             public byte equipKind;
             public byte protocolKind;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 84)]
             public byte[] data;
         }
 
@@ -67,6 +67,32 @@ namespace CommonLib
             EAISERVER = 4,
             LCDSCREEN = 5,
             MULTIPOST = 6
+        }
+
+        public enum PROTOCOLKIND : byte
+        {
+            OTIS = 1,
+            SCHINDLER = 2,
+            SAMIL = 3,
+            HANSON = 4
+        }
+
+        public enum MODENUMBER : byte
+        {
+            MAINTENANCE = 1,
+            PARKING = 4,
+            NORMAL = 5,
+            FIRE = 12,
+            EARTHQUAKE = 13,
+            MOVING = 21
+        }
+
+        public enum ACTIONNUMBER : byte
+        {
+            OPENED = 6,
+            CLOSED = 7,
+            OPENING = 14,
+            CLOSING = 15
         }
 
         public static byte[] MakeFrame(byte[] data)
