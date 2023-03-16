@@ -1340,6 +1340,7 @@ namespace LCDTester
             this.weatherPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.weatherPic.TabIndex = 0;
             this.weatherPic.TabStop = false;
+            this.weatherPic.Click += new System.EventHandler(this.weatherPic_Click);
             // 
             // LCDTester
             // 

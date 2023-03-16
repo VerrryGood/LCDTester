@@ -18,5 +18,7 @@ namespace CommonLib
         public static byte[] sendByteData;
 
         public static readonly Color floorSelectColor = Color.FromArgb(102, 128, 225);
+
+        public static int picIndex = 1;
     }
 }

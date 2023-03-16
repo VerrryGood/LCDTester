@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SetWeatherPic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetWeatherPic.Designer.cs">
+      <DependentUpon>SetWeatherPic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="FloorSendClient.cs" />
     <Compile Include="LCDTester.cs">
@@ -56,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SetWeatherPic.resx">
+      <DependentUpon>SetWeatherPic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LCDTester.resx">
       <DependentUpon>LCDTester.cs</DependentUpon>
     </EmbeddedResource>

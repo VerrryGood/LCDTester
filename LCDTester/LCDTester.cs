@@ -91,6 +91,8 @@ namespace LCDTester
         private Timers.Timer openTimer = new Timers.Timer(10);
         private Timers.Timer closeTimer = new Timers.Timer(10);
 
+        private SetWeatherPic setWeatherPicWindow = new SetWeatherPic();
+
         private void LCDTester_Load(object sender, EventArgs e)
         {
             ReadSettings(currentDir + iniName);
@@ -460,6 +462,142 @@ namespace LCDTester
         {
             floorDataSendClient.Stop();
             BasicFunction.WritePrivateProfileString(CommonValues.baseTitle, CommonValues.ipText, myIP, currentDir + iniName);
+        }
+
+        private void weatherPic_Click(object sender, EventArgs e)
+        {
+            if (setWeatherPicWindow.ShowDialog() == DialogResult.OK)
+            {
+                ChangeWeatherPic();
+                
+            }
+        }
+
+        private void ChangeWeatherPic()
+        {
+            switch (CommonValues.picIndex)
+            {
+                case 1:
+                    weatherPic.Image = Properties.Resources.w_01;
+                    break;
+                case 2:
+                    weatherPic.Image = Properties.Resources.w_02;
+                    break;
+                case 3:
+                    weatherPic.Image = Properties.Resources.w_03;
+                    break;
+                case 4:
+                    weatherPic.Image = Properties.Resources.w_04;
+                    break;
+                case 5:
+                    weatherPic.Image = Properties.Resources.w_05;
+                    break;
+                case 6:
+                    weatherPic.Image = Properties.Resources.w_06;
+                    break;
+                case 7:
+                    weatherPic.Image = Properties.Resources.w_07;
+                    break;
+                case 8:
+                    weatherPic.Image = Properties.Resources.w_08;
+                    break;
+                case 9:
+                    weatherPic.Image = Properties.Resources.w_09;
+                    break;
+                case 10:
+                    weatherPic.Image = Properties.Resources.w_10;
+                    break;
+                case 11:
+                    weatherPic.Image = Properties.Resources.w_11;
+                    break;
+                case 12:
+                    weatherPic.Image = Properties.Resources.w_12;
+                    break;
+                case 13:
+                    weatherPic.Image = Properties.Resources.w_13;
+                    break;
+                case 14:
+                    weatherPic.Image = Properties.Resources.w_14;
+                    break;
+                case 15:
+                    weatherPic.Image = Properties.Resources.w_15;
+                    break;
+                case 16:
+                    weatherPic.Image = Properties.Resources.w_16;
+                    break;
+                case 17:
+                    weatherPic.Image = Properties.Resources.w_17;
+                    break;
+                case 18:
+                    weatherPic.Image = Properties.Resources.w_18;
+                    break;
+                case 19:
+                    weatherPic.Image = Properties.Resources.w_19;
+                    break;
+                case 20:
+                    weatherPic.Image = Properties.Resources.w_20;
+                    break;
+                case 21:
+                    weatherPic.Image = Properties.Resources.w_21;
+                    break;
+                case 22:
+                    weatherPic.Image = Properties.Resources.w_22;
+                    break;
+                case 23:
+                    weatherPic.Image = Properties.Resources.w_23;
+                    break;
+                case 24:
+                    weatherPic.Image = Properties.Resources.w_24;
+                    break;
+                case 25:
+                    weatherPic.Image = Properties.Resources.w_25;
+                    break;
+                case 26:
+                    weatherPic.Image = Properties.Resources.w_26;
+                    break;
+                case 27:
+                    weatherPic.Image = Properties.Resources.w_27;
+                    break;
+                case 28:
+                    weatherPic.Image = Properties.Resources.w_28;
+                    break;
+                case 29:
+                    weatherPic.Image = Properties.Resources.w_29;
+                    break;
+                case 30:
+                    weatherPic.Image = Properties.Resources.w_30;
+                    break;
+                case 31:
+                    weatherPic.Image = Properties.Resources.w_31;
+                    break;
+                case 32:
+                    weatherPic.Image = Properties.Resources.w_32;
+                    break;
+                case 33:
+                    weatherPic.Image = Properties.Resources.w_33;
+                    break;
+                case 34:
+                    weatherPic.Image = Properties.Resources.w_34;
+                    break;
+                case 35:
+                    weatherPic.Image = Properties.Resources.w_35;
+                    break;
+                case 36:
+                    weatherPic.Image = Properties.Resources.w_36;
+                    break;
+                case 37:
+                    weatherPic.Image = Properties.Resources.w_37;
+                    break;
+                case 38:
+                    weatherPic.Image = Properties.Resources.w_38;
+                    break;
+                case 39:
+                    weatherPic.Image = Properties.Resources.w_39;
+                    break;
+                case 40:
+                    weatherPic.Image = Properties.Resources.w_40;
+                    break;
+            }
         }
     }
 }

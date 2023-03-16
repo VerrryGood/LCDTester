@@ -13,3 +13,4 @@ C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Deb
 C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.csproj.CopyComplete
 C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\CommonLib.dll
 C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Debug\CommonLib.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Debug\LCDTester.SetWeatherPic.resources
