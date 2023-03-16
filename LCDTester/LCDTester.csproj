@@ -104,5 +104,125 @@
   <ItemGroup>
     <None Include="Resources\elv_grup_일반_열림.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w_40.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -158,6 +158,7 @@ namespace LCDTester
             CommonValues.elevData.protocolKind = (byte)CommFunction.PROTOCOLKIND.SAMIL;
         }
 
+        #region IP 변경
         private void IPtoByte()
         {
             ips = myIP.Split('.');
@@ -178,7 +179,9 @@ namespace LCDTester
             IPtoByte();
             testerManager.MakeDatatoByte();
         }
+        #endregion
 
+        // 층 정보 변경
         private void ChangeSelectedFloor(object sender, EventArgs e)
         {
             SelectedFloor = BasicFunction.StringtoFloorNum(((Button)sender).Text);
@@ -186,12 +189,13 @@ namespace LCDTester
             {
                 ((Button)sender).BackColor = CommonValues.floorSelectColor;
                 ((Button)sender).ForeColor = Color.White;
-                preFloor.BackColor = BackColor;
+                preFloor.BackColor = Color.White;
                 preFloor.ForeColor = ForeColor;
                 preFloor = ((Button)sender);
             }
         }
 
+        // 서버 ON/OFF
         private void testerOnOff_Click(object sender, EventArgs e)
         {
             if (serverOn)
@@ -317,7 +321,7 @@ namespace LCDTester
             if (arrowUp)
             {
                 floorBtnLayout.Enabled = true;
-                upArrow.BackColor = BackColor;
+                upArrow.BackColor = Color.White;
                 upArrow.ForeColor = ForeColor;
 
                 ChangeArrowUp(false);
@@ -349,7 +353,7 @@ namespace LCDTester
             if (arrowDown)
             {
                 floorBtnLayout.Enabled = true;
-                downArrow.BackColor = BackColor;
+                downArrow.BackColor = Color.White;
                 downArrow.ForeColor = ForeColor;
 
                 ChangeArrowDown(false);
@@ -380,7 +384,7 @@ namespace LCDTester
         #region 엘리베이터 모드(관제) 변경
         private void ChangeElevatorMode(byte curMode)
         {
-            preMode.BackColor = BackColor;
+            preMode.BackColor = Color.White;
             preMode.ForeColor = ForeColor;
 
             switch (curMode)
@@ -413,13 +417,6 @@ namespace LCDTester
 
             CommonValues.lcdData.crtMode = curMode;
             testerManager.MakeDatatoByte();
-        }
-        #endregion
-
-        private void LCDTester_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            floorDataSendClient.Stop();
-            BasicFunction.WritePrivateProfileString(CommonValues.baseTitle, CommonValues.ipText, myIP, currentDir + iniName);
         }
 
         private void normalBtn_Click(object sender, EventArgs e)
@@ -456,6 +453,13 @@ namespace LCDTester
         {
             SelectedMode = (byte)CommFunction.MODENUMBER.MOVING;
             preMode = movingBtn;
+        }
+        #endregion
+
+        private void LCDTester_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            floorDataSendClient.Stop();
+            BasicFunction.WritePrivateProfileString(CommonValues.baseTitle, CommonValues.ipText, myIP, currentDir + iniName);
         }
     }
 }

@@ -47,6 +47,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WindowBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
