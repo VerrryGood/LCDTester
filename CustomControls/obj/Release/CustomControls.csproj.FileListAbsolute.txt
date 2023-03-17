@@ -1,0 +1,8 @@
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\bin\Release\CustomControls.dll
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\bin\Release\CustomControls.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\obj\Release\CustomControls.csproj.AssemblyReference.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\obj\Release\CustomControls.WindowBar.resources
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\obj\Release\CustomControls.csproj.GenerateResource.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\obj\Release\CustomControls.csproj.CoreCompileInputs.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\obj\Release\CustomControls.dll
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\CustomControls\obj\Release\CustomControls.pdb

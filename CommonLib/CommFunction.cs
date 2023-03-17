@@ -12,6 +12,30 @@ namespace CommonLib
     public class CommFunction
     {
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
+        public struct BasicData
+        {
+            public byte opCode;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+            public byte[] sourceIP;
+            public byte equipKind;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 84)]
+            public byte[] data;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 1)]
+        public struct AckData
+        {
+            [MarshalAs(UnmanagedType.I1)]
+            public byte opCode;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+            public byte[] ipAddress;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte equipKind;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte ackKind;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 1)]
         public struct ElevData
         {
             public byte opCode;
@@ -42,6 +66,27 @@ namespace CommonLib
             public byte[] elseData2;
         }
 
+        [StructLayout(LayoutKind.Sequential, Pack = 1)]
+        public struct WeatherData
+        {
+            [MarshalAs(UnmanagedType.I1)]
+            public byte weatherPic;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte tempMinus;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte temperature;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte decTemp;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte humidity;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte dust;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte percent;
+            [MarshalAs(UnmanagedType.I1)]
+            public byte standard;
+        }
+
         public enum OPCODE : byte
         {
             TIMESYNC = 2,
@@ -69,6 +114,14 @@ namespace CommonLib
             MULTIPOST = 6
         }
 
+        public enum COMMACK : byte
+        {
+            SUCCESS = 0,
+            FAILED = 1,
+            DUPLICATE = 2,
+            ALREADYDONE = 3
+        }
+
         public enum PROTOCOLKIND : byte
         {
             OTIS = 1,
@@ -93,6 +146,30 @@ namespace CommonLib
             CLOSED = 7,
             OPENING = 14,
             CLOSING = 15
+        }
+
+        public static byte[] ReleaseFrame(byte[] packet, int actualLength)
+        {
+            if (!(packet[0] == 0xaa && packet[1] == 0xaa))
+                return null;
+
+            if (!(packet[actualLength - 1] == 0x55 && packet[actualLength - 2] == 0x55))
+                return null;
+
+            if (actualLength != (packet[3] * 256) + packet[2])
+                return null;
+
+            int checkSum = CalculateCheckSum(packet, actualLength);
+            byte lowByte = (byte)(checkSum / 256);
+            byte highByte = (byte)(checkSum - (lowByte * 256));
+            if (lowByte != packet[actualLength - 3] || highByte != packet[actualLength - 4])
+                return null;
+
+            byte[] data = new byte[actualLength - 8];
+            Array.Clear(data, 0, data.Length);
+            Array.Copy(packet, 4, data, 0, data.Length);
+
+            return data;
         }
 
         public static byte[] MakeFrame(byte[] data)
@@ -167,6 +244,17 @@ namespace CommonLib
             Marshal.Copy(buff, data, 0, dataSize);
             Marshal.FreeHGlobal(buff);
             return data;
+        }
+
+        public static byte[] AdjustByteLength(byte[] data, int length)
+        {
+            byte[] tempByte = new byte[length];
+            if (data.Length < length)
+            {
+                Array.Copy(data, tempByte, data.Length);
+            }
+
+            return tempByte;
         }
     }
 }

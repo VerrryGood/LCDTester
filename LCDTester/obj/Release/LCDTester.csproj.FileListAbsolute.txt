@@ -1,0 +1,16 @@
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Release\LCDTester.exe.config
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Release\LCDTester.exe
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Release\LCDTester.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Release\CommonLib.dll
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Release\CustomControls.dll
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Release\CommonLib.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\bin\Release\CustomControls.pdb
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.csproj.AssemblyReference.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.SetWeatherPic.resources
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.LCDTester.resources
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.Properties.Resources.resources
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.csproj.GenerateResource.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.csproj.CoreCompileInputs.cache
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.csproj.CopyComplete
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.exe
+C:\Users\ICSSolutions\Documents\새 폴더\테스트\LCDTester\LCDTester\obj\Release\LCDTester.pdb

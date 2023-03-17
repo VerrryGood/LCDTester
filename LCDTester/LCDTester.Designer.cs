@@ -31,6 +31,17 @@ namespace LCDTester
         {
             this.windowBarPanel = new System.Windows.Forms.Panel();
             this.ipBackgroundLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.wthrIP1 = new System.Windows.Forms.TextBox();
+            this.wthrIP2 = new System.Windows.Forms.TextBox();
+            this.wthrIP3 = new System.Windows.Forms.TextBox();
+            this.wthrIP4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.weatherIPSet = new System.Windows.Forms.Button();
             this.ipLinePanel = new System.Windows.Forms.Panel();
             this.ipLayout = new System.Windows.Forms.TableLayoutPanel();
             this.ipSplit3 = new System.Windows.Forms.Label();
@@ -62,64 +73,72 @@ namespace LCDTester
             this.base3rdFloor = new System.Windows.Forms.Button();
             this.arrowDoorLayout = new System.Windows.Forms.TableLayoutPanel();
             this.doorPanel = new System.Windows.Forms.Panel();
+            this.rightDoor = new System.Windows.Forms.PictureBox();
+            this.leftDoor = new System.Windows.Forms.PictureBox();
+            this.elevCar = new System.Windows.Forms.PictureBox();
             this.arrowLayout = new System.Windows.Forms.TableLayoutPanel();
             this.downArrow = new System.Windows.Forms.Button();
             this.upArrow = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.floorBackgroundPanel = new System.Windows.Forms.Panel();
             this.floorLinePanel = new System.Windows.Forms.Panel();
             this.modeBackgroundPanel = new System.Windows.Forms.Panel();
             this.modeLinePanel = new System.Windows.Forms.Panel();
             this.modeLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.normalBtn = new System.Windows.Forms.Button();
-            this.maintenanceBtn = new System.Windows.Forms.Button();
-            this.parkingBtn = new System.Windows.Forms.Button();
-            this.fireBtn = new System.Windows.Forms.Button();
-            this.earthquakeBtn = new System.Windows.Forms.Button();
             this.movingBtn = new System.Windows.Forms.Button();
+            this.earthquakeBtn = new System.Windows.Forms.Button();
+            this.fireBtn = new System.Windows.Forms.Button();
+            this.parkingBtn = new System.Windows.Forms.Button();
+            this.maintenanceBtn = new System.Windows.Forms.Button();
+            this.normalBtn = new System.Windows.Forms.Button();
             this.weatherBackgroundPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.weatherLinePanel = new System.Windows.Forms.Panel();
             this.weatherLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.weatherPicGB = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tempLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.applyTemp = new System.Windows.Forms.Button();
-            this.tempText = new System.Windows.Forms.TextBox();
-            this.tempUnit = new System.Windows.Forms.Label();
-            this.zeroTitle = new System.Windows.Forms.Label();
-            this.overZero = new CustomControls.ToggleSwitch();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.humText = new System.Windows.Forms.TextBox();
-            this.humUnit = new System.Windows.Forms.Label();
-            this.applyHumidity = new System.Windows.Forms.Button();
-            this.tempGB = new System.Windows.Forms.GroupBox();
-            this.humGB = new System.Windows.Forms.GroupBox();
-            this.dustGB = new System.Windows.Forms.GroupBox();
-            this.dustLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.dustUnit = new System.Windows.Forms.Label();
-            this.dustText = new System.Windows.Forms.TextBox();
-            this.applyDust = new System.Windows.Forms.Button();
             this.stdGB = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.stdUnit = new System.Windows.Forms.Label();
             this.stdText = new System.Windows.Forms.TextBox();
             this.applyStandard = new System.Windows.Forms.Button();
-            this.rightDoor = new System.Windows.Forms.PictureBox();
-            this.leftDoor = new System.Windows.Forms.PictureBox();
-            this.elevCar = new System.Windows.Forms.PictureBox();
+            this.dustGB = new System.Windows.Forms.GroupBox();
+            this.dustLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.dustUnit = new System.Windows.Forms.Label();
+            this.dustText = new System.Windows.Forms.TextBox();
+            this.applyDust = new System.Windows.Forms.Button();
+            this.weatherPicGB = new System.Windows.Forms.GroupBox();
             this.weatherPicLayout = new System.Windows.Forms.TableLayoutPanel();
             this.weatherPic = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tempGB = new System.Windows.Forms.GroupBox();
+            this.tempLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.decTempText = new System.Windows.Forms.TextBox();
+            this.applyTemp = new System.Windows.Forms.Button();
+            this.tempText = new System.Windows.Forms.TextBox();
+            this.tempUnit = new System.Windows.Forms.Label();
+            this.zeroTitle = new System.Windows.Forms.Label();
+            this.underZero = new CustomControls.ToggleSwitch();
+            this.label1 = new System.Windows.Forms.Label();
+            this.humGB = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.humUnit = new System.Windows.Forms.Label();
+            this.humText = new System.Windows.Forms.TextBox();
+            this.applyHumidity = new System.Windows.Forms.Button();
+            this.weatherLog = new System.Windows.Forms.TextBox();
             this.ipBackgroundLayout.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.ipLinePanel.SuspendLayout();
             this.ipLayout.SuspendLayout();
             this.floorBackgroundLayout.SuspendLayout();
             this.floorBtnLayout.SuspendLayout();
             this.arrowDoorLayout.SuspendLayout();
             this.doorPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rightDoor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftDoor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elevCar)).BeginInit();
             this.arrowLayout.SuspendLayout();
             this.floorBackgroundPanel.SuspendLayout();
             this.floorLinePanel.SuspendLayout();
@@ -129,20 +148,17 @@ namespace LCDTester
             this.weatherBackgroundPanel.SuspendLayout();
             this.weatherLinePanel.SuspendLayout();
             this.weatherLayout.SuspendLayout();
-            this.weatherPicGB.SuspendLayout();
-            this.tempLayout.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tempGB.SuspendLayout();
-            this.humGB.SuspendLayout();
-            this.dustGB.SuspendLayout();
-            this.dustLayout.SuspendLayout();
             this.stdGB.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rightDoor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftDoor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elevCar)).BeginInit();
+            this.dustGB.SuspendLayout();
+            this.dustLayout.SuspendLayout();
+            this.weatherPicGB.SuspendLayout();
             this.weatherPicLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weatherPic)).BeginInit();
+            this.tempGB.SuspendLayout();
+            this.tempLayout.SuspendLayout();
+            this.humGB.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // windowBarPanel
@@ -158,28 +174,176 @@ namespace LCDTester
             // 
             this.ipBackgroundLayout.ColumnCount = 3;
             this.ipBackgroundLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ipBackgroundLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.ipBackgroundLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.ipBackgroundLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.ipBackgroundLayout.Controls.Add(this.panel7, 0, 1);
             this.ipBackgroundLayout.Controls.Add(this.ipLinePanel, 0, 0);
             this.ipBackgroundLayout.Controls.Add(this.testerOnOff, 2, 0);
+            this.ipBackgroundLayout.Controls.Add(this.weatherLog, 1, 1);
             this.ipBackgroundLayout.Dock = System.Windows.Forms.DockStyle.Top;
             this.ipBackgroundLayout.Location = new System.Drawing.Point(0, 35);
             this.ipBackgroundLayout.Name = "ipBackgroundLayout";
-            this.ipBackgroundLayout.RowCount = 1;
-            this.ipBackgroundLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ipBackgroundLayout.Size = new System.Drawing.Size(800, 80);
+            this.ipBackgroundLayout.RowCount = 2;
+            this.ipBackgroundLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ipBackgroundLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ipBackgroundLayout.Size = new System.Drawing.Size(800, 100);
             this.ipBackgroundLayout.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.panel7.Controls.Add(this.tableLayoutPanel2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(5, 55);
+            this.panel7.Margin = new System.Windows.Forms.Padding(5);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(1);
+            this.panel7.Size = new System.Drawing.Size(460, 40);
+            this.panel7.TabIndex = 2;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.ColumnCount = 9;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel2.Controls.Add(this.label2, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.wthrIP1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.wthrIP2, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.wthrIP3, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.wthrIP4, 7, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.weatherIPSet, 8, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 1);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(458, 38);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(298, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 21);
+            this.label2.TabIndex = 8;
+            this.label2.Text = ".";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(223, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = ".";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(148, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 21);
+            this.label4.TabIndex = 6;
+            this.label4.Text = ".";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wthrIP1
+            // 
+            this.wthrIP1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.wthrIP1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.wthrIP1.Location = new System.Drawing.Point(93, 4);
+            this.wthrIP1.Name = "wthrIP1";
+            this.wthrIP1.Size = new System.Drawing.Size(49, 29);
+            this.wthrIP1.TabIndex = 0;
+            this.wthrIP1.Text = "127";
+            this.wthrIP1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeWeatherIP);
+            // 
+            // wthrIP2
+            // 
+            this.wthrIP2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.wthrIP2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.wthrIP2.Location = new System.Drawing.Point(168, 4);
+            this.wthrIP2.Name = "wthrIP2";
+            this.wthrIP2.Size = new System.Drawing.Size(49, 29);
+            this.wthrIP2.TabIndex = 1;
+            this.wthrIP2.Text = "0";
+            this.wthrIP2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeWeatherIP);
+            // 
+            // wthrIP3
+            // 
+            this.wthrIP3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.wthrIP3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.wthrIP3.Location = new System.Drawing.Point(243, 4);
+            this.wthrIP3.Name = "wthrIP3";
+            this.wthrIP3.Size = new System.Drawing.Size(49, 29);
+            this.wthrIP3.TabIndex = 2;
+            this.wthrIP3.Text = "0";
+            this.wthrIP3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeWeatherIP);
+            // 
+            // wthrIP4
+            // 
+            this.wthrIP4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.wthrIP4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.wthrIP4.Location = new System.Drawing.Point(318, 4);
+            this.wthrIP4.Name = "wthrIP4";
+            this.wthrIP4.Size = new System.Drawing.Size(49, 29);
+            this.wthrIP4.TabIndex = 3;
+            this.wthrIP4.Text = "1";
+            this.wthrIP4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeWeatherIP);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(3, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 21);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "기상 IP";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // weatherIPSet
+            // 
+            this.weatherIPSet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.weatherIPSet.Location = new System.Drawing.Point(376, 3);
+            this.weatherIPSet.Name = "weatherIPSet";
+            this.weatherIPSet.Size = new System.Drawing.Size(75, 32);
+            this.weatherIPSet.TabIndex = 5;
+            this.weatherIPSet.Text = "변경";
+            this.weatherIPSet.UseVisualStyleBackColor = true;
+            this.weatherIPSet.Click += new System.EventHandler(this.weatherIPSet_Click);
             // 
             // ipLinePanel
             // 
             this.ipLinePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
             this.ipLinePanel.Controls.Add(this.ipLayout);
             this.ipLinePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ipLinePanel.Location = new System.Drawing.Point(10, 13);
-            this.ipLinePanel.Margin = new System.Windows.Forms.Padding(10, 13, 5, 13);
+            this.ipLinePanel.Location = new System.Drawing.Point(5, 5);
+            this.ipLinePanel.Margin = new System.Windows.Forms.Padding(5);
             this.ipLinePanel.Name = "ipLinePanel";
             this.ipLinePanel.Padding = new System.Windows.Forms.Padding(1);
-            this.ipLinePanel.Size = new System.Drawing.Size(505, 54);
+            this.ipLinePanel.Size = new System.Drawing.Size(460, 40);
             this.ipLinePanel.TabIndex = 0;
             // 
             // ipLayout
@@ -194,7 +358,7 @@ namespace LCDTester
             this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.ipLayout.Controls.Add(this.ipSplit3, 6, 0);
             this.ipLayout.Controls.Add(this.ipSplit2, 4, 0);
             this.ipLayout.Controls.Add(this.ipSplit1, 2, 0);
@@ -209,7 +373,7 @@ namespace LCDTester
             this.ipLayout.Name = "ipLayout";
             this.ipLayout.RowCount = 1;
             this.ipLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ipLayout.Size = new System.Drawing.Size(503, 52);
+            this.ipLayout.Size = new System.Drawing.Size(458, 38);
             this.ipLayout.TabIndex = 0;
             // 
             // ipSplit3
@@ -217,7 +381,7 @@ namespace LCDTester
             this.ipSplit3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipSplit3.AutoSize = true;
             this.ipSplit3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipSplit3.Location = new System.Drawing.Point(334, 15);
+            this.ipSplit3.Location = new System.Drawing.Point(298, 8);
             this.ipSplit3.Name = "ipSplit3";
             this.ipSplit3.Size = new System.Drawing.Size(14, 21);
             this.ipSplit3.TabIndex = 8;
@@ -229,7 +393,7 @@ namespace LCDTester
             this.ipSplit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipSplit2.AutoSize = true;
             this.ipSplit2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipSplit2.Location = new System.Drawing.Point(247, 15);
+            this.ipSplit2.Location = new System.Drawing.Point(223, 8);
             this.ipSplit2.Name = "ipSplit2";
             this.ipSplit2.Size = new System.Drawing.Size(14, 21);
             this.ipSplit2.TabIndex = 7;
@@ -241,7 +405,7 @@ namespace LCDTester
             this.ipSplit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipSplit1.AutoSize = true;
             this.ipSplit1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipSplit1.Location = new System.Drawing.Point(160, 15);
+            this.ipSplit1.Location = new System.Drawing.Point(148, 8);
             this.ipSplit1.Name = "ipSplit1";
             this.ipSplit1.Size = new System.Drawing.Size(14, 21);
             this.ipSplit1.TabIndex = 6;
@@ -252,9 +416,9 @@ namespace LCDTester
             // 
             this.ipText1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText1.Location = new System.Drawing.Point(93, 11);
+            this.ipText1.Location = new System.Drawing.Point(93, 4);
             this.ipText1.Name = "ipText1";
-            this.ipText1.Size = new System.Drawing.Size(61, 29);
+            this.ipText1.Size = new System.Drawing.Size(49, 29);
             this.ipText1.TabIndex = 0;
             this.ipText1.Text = "127";
             this.ipText1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeIP);
@@ -263,9 +427,9 @@ namespace LCDTester
             // 
             this.ipText2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText2.Location = new System.Drawing.Point(180, 11);
+            this.ipText2.Location = new System.Drawing.Point(168, 4);
             this.ipText2.Name = "ipText2";
-            this.ipText2.Size = new System.Drawing.Size(61, 29);
+            this.ipText2.Size = new System.Drawing.Size(49, 29);
             this.ipText2.TabIndex = 1;
             this.ipText2.Text = "0";
             this.ipText2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeIP);
@@ -274,9 +438,9 @@ namespace LCDTester
             // 
             this.ipText3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText3.Location = new System.Drawing.Point(267, 11);
+            this.ipText3.Location = new System.Drawing.Point(243, 4);
             this.ipText3.Name = "ipText3";
-            this.ipText3.Size = new System.Drawing.Size(61, 29);
+            this.ipText3.Size = new System.Drawing.Size(49, 29);
             this.ipText3.TabIndex = 2;
             this.ipText3.Text = "0";
             this.ipText3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeIP);
@@ -285,9 +449,9 @@ namespace LCDTester
             // 
             this.ipText4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText4.Location = new System.Drawing.Point(354, 11);
+            this.ipText4.Location = new System.Drawing.Point(318, 4);
             this.ipText4.Name = "ipText4";
-            this.ipText4.Size = new System.Drawing.Size(61, 29);
+            this.ipText4.Size = new System.Drawing.Size(49, 29);
             this.ipText4.TabIndex = 3;
             this.ipText4.Text = "1";
             this.ipText4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeIP);
@@ -297,7 +461,7 @@ namespace LCDTester
             this.ipTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipTitle.AutoSize = true;
             this.ipTitle.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipTitle.Location = new System.Drawing.Point(3, 15);
+            this.ipTitle.Location = new System.Drawing.Point(3, 8);
             this.ipTitle.Name = "ipTitle";
             this.ipTitle.Size = new System.Drawing.Size(84, 21);
             this.ipTitle.TabIndex = 4;
@@ -307,9 +471,9 @@ namespace LCDTester
             // ipSet
             // 
             this.ipSet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ipSet.Location = new System.Drawing.Point(423, 8);
+            this.ipSet.Location = new System.Drawing.Point(376, 3);
             this.ipSet.Name = "ipSet";
-            this.ipSet.Size = new System.Drawing.Size(75, 35);
+            this.ipSet.Size = new System.Drawing.Size(75, 32);
             this.ipSet.TabIndex = 5;
             this.ipSet.Text = "변경";
             this.ipSet.UseVisualStyleBackColor = true;
@@ -326,7 +490,8 @@ namespace LCDTester
             this.testerOnOff.Location = new System.Drawing.Point(625, 5);
             this.testerOnOff.Margin = new System.Windows.Forms.Padding(5, 5, 10, 5);
             this.testerOnOff.Name = "testerOnOff";
-            this.testerOnOff.Size = new System.Drawing.Size(165, 70);
+            this.ipBackgroundLayout.SetRowSpan(this.testerOnOff, 2);
+            this.testerOnOff.Size = new System.Drawing.Size(165, 90);
             this.testerOnOff.TabIndex = 1;
             this.testerOnOff.TabStop = false;
             this.testerOnOff.Text = "서버 시작";
@@ -657,6 +822,40 @@ namespace LCDTester
             this.doorPanel.Size = new System.Drawing.Size(158, 158);
             this.doorPanel.TabIndex = 0;
             // 
+            // rightDoor
+            // 
+            this.rightDoor.Image = global::LCDTester.Properties.Resources.elv_grup_일반_R;
+            this.rightDoor.Location = new System.Drawing.Point(79, 0);
+            this.rightDoor.Name = "rightDoor";
+            this.rightDoor.Size = new System.Drawing.Size(79, 164);
+            this.rightDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rightDoor.TabIndex = 2;
+            this.rightDoor.TabStop = false;
+            this.rightDoor.Visible = false;
+            // 
+            // leftDoor
+            // 
+            this.leftDoor.Image = global::LCDTester.Properties.Resources.elv_grup_일반_L;
+            this.leftDoor.Location = new System.Drawing.Point(0, 0);
+            this.leftDoor.Name = "leftDoor";
+            this.leftDoor.Size = new System.Drawing.Size(79, 164);
+            this.leftDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.leftDoor.TabIndex = 1;
+            this.leftDoor.TabStop = false;
+            this.leftDoor.Visible = false;
+            // 
+            // elevCar
+            // 
+            this.elevCar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elevCar.Image = global::LCDTester.Properties.Resources.elv_grup_일반_닫힘;
+            this.elevCar.Location = new System.Drawing.Point(0, 0);
+            this.elevCar.Name = "elevCar";
+            this.elevCar.Size = new System.Drawing.Size(158, 158);
+            this.elevCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.elevCar.TabIndex = 0;
+            this.elevCar.TabStop = false;
+            this.elevCar.Click += new System.EventHandler(this.elevCar_Click);
+            // 
             // arrowLayout
             // 
             this.arrowLayout.ColumnCount = 1;
@@ -702,11 +901,30 @@ namespace LCDTester
             this.upArrow.UseVisualStyleBackColor = true;
             this.upArrow.Click += new System.EventHandler(this.upArrow_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.panel3.Location = new System.Drawing.Point(0, 171);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(170, 1);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(607, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 342);
+            this.panel2.TabIndex = 2;
+            // 
             // floorBackgroundPanel
             // 
             this.floorBackgroundPanel.Controls.Add(this.floorLinePanel);
             this.floorBackgroundPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.floorBackgroundPanel.Location = new System.Drawing.Point(0, 115);
+            this.floorBackgroundPanel.Location = new System.Drawing.Point(0, 135);
             this.floorBackgroundPanel.Name = "floorBackgroundPanel";
             this.floorBackgroundPanel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.floorBackgroundPanel.Size = new System.Drawing.Size(800, 354);
@@ -727,7 +945,7 @@ namespace LCDTester
             // 
             this.modeBackgroundPanel.Controls.Add(this.modeLinePanel);
             this.modeBackgroundPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.modeBackgroundPanel.Location = new System.Drawing.Point(0, 469);
+            this.modeBackgroundPanel.Location = new System.Drawing.Point(0, 489);
             this.modeBackgroundPanel.Name = "modeBackgroundPanel";
             this.modeBackgroundPanel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.modeBackgroundPanel.Size = new System.Drawing.Size(800, 147);
@@ -769,6 +987,76 @@ namespace LCDTester
             this.modeLayout.Size = new System.Drawing.Size(778, 135);
             this.modeLayout.TabIndex = 0;
             // 
+            // movingBtn
+            // 
+            this.movingBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.movingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.movingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.movingBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.movingBtn.Location = new System.Drawing.Point(649, 4);
+            this.movingBtn.Name = "movingBtn";
+            this.movingBtn.Size = new System.Drawing.Size(123, 127);
+            this.movingBtn.TabIndex = 5;
+            this.movingBtn.Text = "이사";
+            this.movingBtn.UseVisualStyleBackColor = true;
+            this.movingBtn.Click += new System.EventHandler(this.movingBtn_Click);
+            // 
+            // earthquakeBtn
+            // 
+            this.earthquakeBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.earthquakeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.earthquakeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.earthquakeBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.earthquakeBtn.Location = new System.Drawing.Point(520, 4);
+            this.earthquakeBtn.Name = "earthquakeBtn";
+            this.earthquakeBtn.Size = new System.Drawing.Size(123, 127);
+            this.earthquakeBtn.TabIndex = 4;
+            this.earthquakeBtn.Text = "지진";
+            this.earthquakeBtn.UseVisualStyleBackColor = true;
+            this.earthquakeBtn.Click += new System.EventHandler(this.earthquakeBtn_Click);
+            // 
+            // fireBtn
+            // 
+            this.fireBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.fireBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.fireBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fireBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.fireBtn.Location = new System.Drawing.Point(391, 4);
+            this.fireBtn.Name = "fireBtn";
+            this.fireBtn.Size = new System.Drawing.Size(123, 127);
+            this.fireBtn.TabIndex = 3;
+            this.fireBtn.Text = "화재";
+            this.fireBtn.UseVisualStyleBackColor = true;
+            this.fireBtn.Click += new System.EventHandler(this.fireBtn_Click);
+            // 
+            // parkingBtn
+            // 
+            this.parkingBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.parkingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.parkingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.parkingBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.parkingBtn.Location = new System.Drawing.Point(262, 4);
+            this.parkingBtn.Name = "parkingBtn";
+            this.parkingBtn.Size = new System.Drawing.Size(123, 127);
+            this.parkingBtn.TabIndex = 2;
+            this.parkingBtn.Text = "파킹";
+            this.parkingBtn.UseVisualStyleBackColor = true;
+            this.parkingBtn.Click += new System.EventHandler(this.parkingBtn_Click);
+            // 
+            // maintenanceBtn
+            // 
+            this.maintenanceBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.maintenanceBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.maintenanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maintenanceBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.maintenanceBtn.Location = new System.Drawing.Point(133, 4);
+            this.maintenanceBtn.Name = "maintenanceBtn";
+            this.maintenanceBtn.Size = new System.Drawing.Size(123, 127);
+            this.maintenanceBtn.TabIndex = 1;
+            this.maintenanceBtn.Text = "점검";
+            this.maintenanceBtn.UseVisualStyleBackColor = true;
+            this.maintenanceBtn.Click += new System.EventHandler(this.maintenanceBtn_Click);
+            // 
             // normalBtn
             // 
             this.normalBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(128)))), ((int)(((byte)(225)))));
@@ -785,104 +1073,15 @@ namespace LCDTester
             this.normalBtn.UseVisualStyleBackColor = false;
             this.normalBtn.Click += new System.EventHandler(this.normalBtn_Click);
             // 
-            // maintenanceBtn
-            // 
-            this.maintenanceBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.maintenanceBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.maintenanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maintenanceBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.maintenanceBtn.Location = new System.Drawing.Point(133, 4);
-            this.maintenanceBtn.Name = "maintenanceBtn";
-            this.maintenanceBtn.Size = new System.Drawing.Size(123, 127);
-            this.maintenanceBtn.TabIndex = 1;
-            this.maintenanceBtn.Text = "점검";
-            this.maintenanceBtn.UseVisualStyleBackColor = true;
-            this.maintenanceBtn.Click += new System.EventHandler(this.maintenanceBtn_Click);
-            // 
-            // parkingBtn
-            // 
-            this.parkingBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.parkingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.parkingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.parkingBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.parkingBtn.Location = new System.Drawing.Point(262, 4);
-            this.parkingBtn.Name = "parkingBtn";
-            this.parkingBtn.Size = new System.Drawing.Size(123, 127);
-            this.parkingBtn.TabIndex = 2;
-            this.parkingBtn.Text = "파킹";
-            this.parkingBtn.UseVisualStyleBackColor = true;
-            this.parkingBtn.Click += new System.EventHandler(this.parkingBtn_Click);
-            // 
-            // fireBtn
-            // 
-            this.fireBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.fireBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.fireBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fireBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.fireBtn.Location = new System.Drawing.Point(391, 4);
-            this.fireBtn.Name = "fireBtn";
-            this.fireBtn.Size = new System.Drawing.Size(123, 127);
-            this.fireBtn.TabIndex = 3;
-            this.fireBtn.Text = "화재";
-            this.fireBtn.UseVisualStyleBackColor = true;
-            this.fireBtn.Click += new System.EventHandler(this.fireBtn_Click);
-            // 
-            // earthquakeBtn
-            // 
-            this.earthquakeBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.earthquakeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.earthquakeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.earthquakeBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.earthquakeBtn.Location = new System.Drawing.Point(520, 4);
-            this.earthquakeBtn.Name = "earthquakeBtn";
-            this.earthquakeBtn.Size = new System.Drawing.Size(123, 127);
-            this.earthquakeBtn.TabIndex = 4;
-            this.earthquakeBtn.Text = "지진";
-            this.earthquakeBtn.UseVisualStyleBackColor = true;
-            this.earthquakeBtn.Click += new System.EventHandler(this.earthquakeBtn_Click);
-            // 
-            // movingBtn
-            // 
-            this.movingBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.movingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.movingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.movingBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.movingBtn.Location = new System.Drawing.Point(649, 4);
-            this.movingBtn.Name = "movingBtn";
-            this.movingBtn.Size = new System.Drawing.Size(123, 127);
-            this.movingBtn.TabIndex = 5;
-            this.movingBtn.Text = "이사";
-            this.movingBtn.UseVisualStyleBackColor = true;
-            this.movingBtn.Click += new System.EventHandler(this.movingBtn_Click);
-            // 
             // weatherBackgroundPanel
             // 
             this.weatherBackgroundPanel.Controls.Add(this.weatherLinePanel);
             this.weatherBackgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weatherBackgroundPanel.Location = new System.Drawing.Point(0, 616);
+            this.weatherBackgroundPanel.Location = new System.Drawing.Point(0, 636);
             this.weatherBackgroundPanel.Name = "weatherBackgroundPanel";
             this.weatherBackgroundPanel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.weatherBackgroundPanel.Size = new System.Drawing.Size(800, 263);
+            this.weatherBackgroundPanel.Size = new System.Drawing.Size(800, 259);
             this.weatherBackgroundPanel.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(607, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 342);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.panel3.Location = new System.Drawing.Point(0, 171);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 1);
-            this.panel3.TabIndex = 2;
             // 
             // weatherLinePanel
             // 
@@ -892,7 +1091,7 @@ namespace LCDTester
             this.weatherLinePanel.Location = new System.Drawing.Point(10, 5);
             this.weatherLinePanel.Name = "weatherLinePanel";
             this.weatherLinePanel.Padding = new System.Windows.Forms.Padding(1);
-            this.weatherLinePanel.Size = new System.Drawing.Size(780, 248);
+            this.weatherLinePanel.Size = new System.Drawing.Size(780, 244);
             this.weatherLinePanel.TabIndex = 0;
             // 
             // weatherLayout
@@ -920,307 +1119,18 @@ namespace LCDTester
             this.weatherLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.weatherLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
             this.weatherLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.weatherLayout.Size = new System.Drawing.Size(778, 246);
+            this.weatherLayout.Size = new System.Drawing.Size(778, 242);
             this.weatherLayout.TabIndex = 0;
-            // 
-            // weatherPicGB
-            // 
-            this.weatherPicGB.Controls.Add(this.weatherPicLayout);
-            this.weatherPicGB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weatherPicGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.weatherPicGB.Location = new System.Drawing.Point(558, 10);
-            this.weatherPicGB.Margin = new System.Windows.Forms.Padding(10);
-            this.weatherPicGB.Name = "weatherPicGB";
-            this.weatherLayout.SetRowSpan(this.weatherPicGB, 3);
-            this.weatherPicGB.Size = new System.Drawing.Size(210, 226);
-            this.weatherPicGB.TabIndex = 0;
-            this.weatherPicGB.TabStop = false;
-            this.weatherPicGB.Text = "날씨 그림";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.weatherLayout.SetColumnSpan(this.panel1, 3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 147);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(547, 1);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(547, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.weatherLayout.SetRowSpan(this.panel4, 3);
-            this.panel4.Size = new System.Drawing.Size(1, 246);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(273, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 147);
-            this.panel5.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(273, 148);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 98);
-            this.panel6.TabIndex = 4;
-            // 
-            // tempLayout
-            // 
-            this.tempLayout.ColumnCount = 4;
-            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tempLayout.Controls.Add(this.applyTemp, 3, 0);
-            this.tempLayout.Controls.Add(this.tempText, 0, 0);
-            this.tempLayout.Controls.Add(this.tempUnit, 2, 0);
-            this.tempLayout.Controls.Add(this.zeroTitle, 0, 1);
-            this.tempLayout.Controls.Add(this.overZero, 1, 1);
-            this.tempLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tempLayout.Location = new System.Drawing.Point(3, 25);
-            this.tempLayout.Name = "tempLayout";
-            this.tempLayout.RowCount = 2;
-            this.tempLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tempLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tempLayout.Size = new System.Drawing.Size(251, 103);
-            this.tempLayout.TabIndex = 5;
-            // 
-            // applyTemp
-            // 
-            this.applyTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.applyTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.applyTemp.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.applyTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.applyTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applyTemp.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.applyTemp.ForeColor = System.Drawing.Color.White;
-            this.applyTemp.Location = new System.Drawing.Point(173, 3);
-            this.applyTemp.Name = "applyTemp";
-            this.tempLayout.SetRowSpan(this.applyTemp, 2);
-            this.applyTemp.Size = new System.Drawing.Size(75, 96);
-            this.applyTemp.TabIndex = 0;
-            this.applyTemp.Text = "변경";
-            this.applyTemp.UseVisualStyleBackColor = false;
-            // 
-            // tempText
-            // 
-            this.tempText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tempLayout.SetColumnSpan(this.tempText, 2);
-            this.tempText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tempText.Location = new System.Drawing.Point(3, 3);
-            this.tempText.Name = "tempText";
-            this.tempText.Size = new System.Drawing.Size(119, 46);
-            this.tempText.TabIndex = 1;
-            this.tempText.Text = "0";
-            // 
-            // tempUnit
-            // 
-            this.tempUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tempUnit.AutoSize = true;
-            this.tempUnit.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tempUnit.Location = new System.Drawing.Point(128, 5);
-            this.tempUnit.Name = "tempUnit";
-            this.tempUnit.Size = new System.Drawing.Size(39, 40);
-            this.tempUnit.TabIndex = 2;
-            this.tempUnit.Text = "℃";
-            // 
-            // zeroTitle
-            // 
-            this.zeroTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.zeroTitle.AutoSize = true;
-            this.zeroTitle.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.zeroTitle.Location = new System.Drawing.Point(3, 62);
-            this.zeroTitle.Name = "zeroTitle";
-            this.zeroTitle.Size = new System.Drawing.Size(59, 30);
-            this.zeroTitle.TabIndex = 3;
-            this.zeroTitle.Text = "영하";
-            this.zeroTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // overZero
-            // 
-            this.overZero.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.overZero.Location = new System.Drawing.Point(68, 64);
-            this.overZero.Name = "overZero";
-            this.overZero.Padding = new System.Windows.Forms.Padding(1);
-            this.overZero.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.overZero.Size = new System.Drawing.Size(54, 25);
-            this.overZero.TabIndex = 4;
-            this.overZero.Text = "toggleSwitch1";
-            this.overZero.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.humUnit, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.humText, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.applyHumidity, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 25);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(251, 103);
-            this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // humText
-            // 
-            this.humText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.humText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.humText.Location = new System.Drawing.Point(3, 28);
-            this.humText.Name = "humText";
-            this.humText.Size = new System.Drawing.Size(119, 46);
-            this.humText.TabIndex = 2;
-            this.humText.Text = "0";
-            // 
-            // humUnit
-            // 
-            this.humUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.humUnit.AutoSize = true;
-            this.humUnit.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.humUnit.Location = new System.Drawing.Point(128, 31);
-            this.humUnit.Name = "humUnit";
-            this.humUnit.Size = new System.Drawing.Size(39, 40);
-            this.humUnit.TabIndex = 3;
-            this.humUnit.Text = "%";
-            // 
-            // applyHumidity
-            // 
-            this.applyHumidity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.applyHumidity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.applyHumidity.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.applyHumidity.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.applyHumidity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applyHumidity.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.applyHumidity.ForeColor = System.Drawing.Color.White;
-            this.applyHumidity.Location = new System.Drawing.Point(173, 26);
-            this.applyHumidity.Name = "applyHumidity";
-            this.applyHumidity.Size = new System.Drawing.Size(75, 50);
-            this.applyHumidity.TabIndex = 4;
-            this.applyHumidity.Text = "변경";
-            this.applyHumidity.UseVisualStyleBackColor = false;
-            // 
-            // tempGB
-            // 
-            this.tempGB.Controls.Add(this.tempLayout);
-            this.tempGB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tempGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tempGB.Location = new System.Drawing.Point(8, 8);
-            this.tempGB.Margin = new System.Windows.Forms.Padding(8);
-            this.tempGB.Name = "tempGB";
-            this.tempGB.Size = new System.Drawing.Size(257, 131);
-            this.tempGB.TabIndex = 7;
-            this.tempGB.TabStop = false;
-            this.tempGB.Text = "기온 변경";
-            // 
-            // humGB
-            // 
-            this.humGB.Controls.Add(this.tableLayoutPanel1);
-            this.humGB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.humGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.humGB.Location = new System.Drawing.Point(282, 8);
-            this.humGB.Margin = new System.Windows.Forms.Padding(8);
-            this.humGB.Name = "humGB";
-            this.humGB.Size = new System.Drawing.Size(257, 131);
-            this.humGB.TabIndex = 8;
-            this.humGB.TabStop = false;
-            this.humGB.Text = "습도 변경";
-            // 
-            // dustGB
-            // 
-            this.dustGB.Controls.Add(this.dustLayout);
-            this.dustGB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dustGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dustGB.Location = new System.Drawing.Point(8, 156);
-            this.dustGB.Margin = new System.Windows.Forms.Padding(8);
-            this.dustGB.Name = "dustGB";
-            this.dustGB.Size = new System.Drawing.Size(257, 82);
-            this.dustGB.TabIndex = 9;
-            this.dustGB.TabStop = false;
-            this.dustGB.Text = "미세먼지 변경";
-            // 
-            // dustLayout
-            // 
-            this.dustLayout.ColumnCount = 3;
-            this.dustLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.dustLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.dustLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dustLayout.Controls.Add(this.dustUnit, 0, 0);
-            this.dustLayout.Controls.Add(this.dustText, 0, 0);
-            this.dustLayout.Controls.Add(this.applyDust, 2, 0);
-            this.dustLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dustLayout.Location = new System.Drawing.Point(3, 25);
-            this.dustLayout.Name = "dustLayout";
-            this.dustLayout.RowCount = 1;
-            this.dustLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dustLayout.Size = new System.Drawing.Size(251, 54);
-            this.dustLayout.TabIndex = 6;
-            // 
-            // dustUnit
-            // 
-            this.dustUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dustUnit.AutoSize = true;
-            this.dustUnit.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dustUnit.Location = new System.Drawing.Point(83, 11);
-            this.dustUnit.Name = "dustUnit";
-            this.dustUnit.Size = new System.Drawing.Size(84, 32);
-            this.dustUnit.TabIndex = 3;
-            this.dustUnit.Text = "㎍/m³";
-            // 
-            // dustText
-            // 
-            this.dustText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dustText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dustText.Location = new System.Drawing.Point(3, 4);
-            this.dustText.Name = "dustText";
-            this.dustText.Size = new System.Drawing.Size(74, 46);
-            this.dustText.TabIndex = 2;
-            this.dustText.Text = "0";
-            // 
-            // applyDust
-            // 
-            this.applyDust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.applyDust.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.applyDust.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.applyDust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.applyDust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applyDust.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.applyDust.ForeColor = System.Drawing.Color.White;
-            this.applyDust.Location = new System.Drawing.Point(173, 3);
-            this.applyDust.Name = "applyDust";
-            this.applyDust.Size = new System.Drawing.Size(75, 48);
-            this.applyDust.TabIndex = 4;
-            this.applyDust.Text = "변경";
-            this.applyDust.UseVisualStyleBackColor = false;
             // 
             // stdGB
             // 
             this.stdGB.Controls.Add(this.tableLayoutPanel3);
             this.stdGB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stdGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.stdGB.Location = new System.Drawing.Point(282, 156);
+            this.stdGB.Location = new System.Drawing.Point(282, 153);
             this.stdGB.Margin = new System.Windows.Forms.Padding(8);
             this.stdGB.Name = "stdGB";
-            this.stdGB.Size = new System.Drawing.Size(257, 82);
+            this.stdGB.Size = new System.Drawing.Size(257, 81);
             this.stdGB.TabIndex = 10;
             this.stdGB.TabStop = false;
             this.stdGB.Text = "법적기준 변경";
@@ -1239,9 +1149,9 @@ namespace LCDTester
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(251, 54);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(251, 53);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // stdUnit
@@ -1249,7 +1159,7 @@ namespace LCDTester
             this.stdUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.stdUnit.AutoSize = true;
             this.stdUnit.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.stdUnit.Location = new System.Drawing.Point(128, 7);
+            this.stdUnit.Location = new System.Drawing.Point(128, 6);
             this.stdUnit.Name = "stdUnit";
             this.stdUnit.Size = new System.Drawing.Size(39, 40);
             this.stdUnit.TabIndex = 3;
@@ -1259,11 +1169,12 @@ namespace LCDTester
             // 
             this.stdText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.stdText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.stdText.Location = new System.Drawing.Point(3, 4);
+            this.stdText.Location = new System.Drawing.Point(3, 3);
             this.stdText.Name = "stdText";
             this.stdText.Size = new System.Drawing.Size(119, 46);
             this.stdText.TabIndex = 2;
             this.stdText.Text = "0";
+            this.stdText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.stdText_KeyDown);
             // 
             // applyStandard
             // 
@@ -1276,44 +1187,94 @@ namespace LCDTester
             this.applyStandard.ForeColor = System.Drawing.Color.White;
             this.applyStandard.Location = new System.Drawing.Point(173, 3);
             this.applyStandard.Name = "applyStandard";
-            this.applyStandard.Size = new System.Drawing.Size(75, 48);
+            this.applyStandard.Size = new System.Drawing.Size(75, 47);
             this.applyStandard.TabIndex = 4;
             this.applyStandard.Text = "변경";
             this.applyStandard.UseVisualStyleBackColor = false;
+            this.applyStandard.Click += new System.EventHandler(this.applyStandard_Click);
             // 
-            // rightDoor
+            // dustGB
             // 
-            this.rightDoor.Image = global::LCDTester.Properties.Resources.elv_grup_일반_R;
-            this.rightDoor.Location = new System.Drawing.Point(79, 0);
-            this.rightDoor.Name = "rightDoor";
-            this.rightDoor.Size = new System.Drawing.Size(79, 164);
-            this.rightDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rightDoor.TabIndex = 2;
-            this.rightDoor.TabStop = false;
-            this.rightDoor.Visible = false;
+            this.dustGB.Controls.Add(this.dustLayout);
+            this.dustGB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dustGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dustGB.Location = new System.Drawing.Point(8, 153);
+            this.dustGB.Margin = new System.Windows.Forms.Padding(8);
+            this.dustGB.Name = "dustGB";
+            this.dustGB.Size = new System.Drawing.Size(257, 81);
+            this.dustGB.TabIndex = 9;
+            this.dustGB.TabStop = false;
+            this.dustGB.Text = "미세먼지 변경";
             // 
-            // leftDoor
+            // dustLayout
             // 
-            this.leftDoor.Image = global::LCDTester.Properties.Resources.elv_grup_일반_L;
-            this.leftDoor.Location = new System.Drawing.Point(0, 0);
-            this.leftDoor.Name = "leftDoor";
-            this.leftDoor.Size = new System.Drawing.Size(79, 164);
-            this.leftDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.leftDoor.TabIndex = 1;
-            this.leftDoor.TabStop = false;
-            this.leftDoor.Visible = false;
+            this.dustLayout.ColumnCount = 3;
+            this.dustLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.dustLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.dustLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dustLayout.Controls.Add(this.dustUnit, 0, 0);
+            this.dustLayout.Controls.Add(this.dustText, 0, 0);
+            this.dustLayout.Controls.Add(this.applyDust, 2, 0);
+            this.dustLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dustLayout.Location = new System.Drawing.Point(3, 25);
+            this.dustLayout.Name = "dustLayout";
+            this.dustLayout.RowCount = 1;
+            this.dustLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dustLayout.Size = new System.Drawing.Size(251, 53);
+            this.dustLayout.TabIndex = 6;
             // 
-            // elevCar
+            // dustUnit
             // 
-            this.elevCar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elevCar.Image = global::LCDTester.Properties.Resources.elv_grup_일반_닫힘;
-            this.elevCar.Location = new System.Drawing.Point(0, 0);
-            this.elevCar.Name = "elevCar";
-            this.elevCar.Size = new System.Drawing.Size(158, 158);
-            this.elevCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.elevCar.TabIndex = 0;
-            this.elevCar.TabStop = false;
-            this.elevCar.Click += new System.EventHandler(this.elevCar_Click);
+            this.dustUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dustUnit.AutoSize = true;
+            this.dustUnit.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dustUnit.Location = new System.Drawing.Point(83, 10);
+            this.dustUnit.Name = "dustUnit";
+            this.dustUnit.Size = new System.Drawing.Size(84, 32);
+            this.dustUnit.TabIndex = 3;
+            this.dustUnit.Text = "㎍/m³";
+            // 
+            // dustText
+            // 
+            this.dustText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dustText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dustText.Location = new System.Drawing.Point(3, 3);
+            this.dustText.Name = "dustText";
+            this.dustText.Size = new System.Drawing.Size(74, 46);
+            this.dustText.TabIndex = 2;
+            this.dustText.Text = "0";
+            this.dustText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dustText_KeyDown);
+            // 
+            // applyDust
+            // 
+            this.applyDust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.applyDust.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.applyDust.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.applyDust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.applyDust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applyDust.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.applyDust.ForeColor = System.Drawing.Color.White;
+            this.applyDust.Location = new System.Drawing.Point(173, 3);
+            this.applyDust.Name = "applyDust";
+            this.applyDust.Size = new System.Drawing.Size(75, 47);
+            this.applyDust.TabIndex = 4;
+            this.applyDust.Text = "변경";
+            this.applyDust.UseVisualStyleBackColor = false;
+            this.applyDust.Click += new System.EventHandler(this.applyDust_Click);
+            // 
+            // weatherPicGB
+            // 
+            this.weatherPicGB.Controls.Add(this.weatherPicLayout);
+            this.weatherPicGB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weatherPicGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.weatherPicGB.Location = new System.Drawing.Point(558, 10);
+            this.weatherPicGB.Margin = new System.Windows.Forms.Padding(10);
+            this.weatherPicGB.Name = "weatherPicGB";
+            this.weatherLayout.SetRowSpan(this.weatherPicGB, 3);
+            this.weatherPicGB.Size = new System.Drawing.Size(210, 222);
+            this.weatherPicGB.TabIndex = 0;
+            this.weatherPicGB.TabStop = false;
+            this.weatherPicGB.Text = "날씨 그림";
             // 
             // weatherPicLayout
             // 
@@ -1326,15 +1287,15 @@ namespace LCDTester
             this.weatherPicLayout.Name = "weatherPicLayout";
             this.weatherPicLayout.RowCount = 1;
             this.weatherPicLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.weatherPicLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.weatherPicLayout.Size = new System.Drawing.Size(204, 198);
+            this.weatherPicLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.weatherPicLayout.Size = new System.Drawing.Size(204, 194);
             this.weatherPicLayout.TabIndex = 0;
             // 
             // weatherPic
             // 
             this.weatherPic.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.weatherPic.Image = global::LCDTester.Properties.Resources.w_01;
-            this.weatherPic.Location = new System.Drawing.Point(5, 22);
+            this.weatherPic.Location = new System.Drawing.Point(5, 20);
             this.weatherPic.Name = "weatherPic";
             this.weatherPic.Size = new System.Drawing.Size(193, 154);
             this.weatherPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1342,11 +1303,260 @@ namespace LCDTester
             this.weatherPic.TabStop = false;
             this.weatherPic.Click += new System.EventHandler(this.weatherPic_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.weatherLayout.SetColumnSpan(this.panel1, 3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 144);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(547, 1);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(547, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.weatherLayout.SetRowSpan(this.panel4, 3);
+            this.panel4.Size = new System.Drawing.Size(1, 242);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(273, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 144);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(273, 145);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 97);
+            this.panel6.TabIndex = 4;
+            // 
+            // tempGB
+            // 
+            this.tempGB.Controls.Add(this.tempLayout);
+            this.tempGB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tempGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tempGB.Location = new System.Drawing.Point(8, 8);
+            this.tempGB.Margin = new System.Windows.Forms.Padding(8);
+            this.tempGB.Name = "tempGB";
+            this.tempGB.Size = new System.Drawing.Size(257, 128);
+            this.tempGB.TabIndex = 7;
+            this.tempGB.TabStop = false;
+            this.tempGB.Text = "기온 변경";
+            // 
+            // tempLayout
+            // 
+            this.tempLayout.ColumnCount = 5;
+            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tempLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tempLayout.Controls.Add(this.decTempText, 2, 0);
+            this.tempLayout.Controls.Add(this.applyTemp, 4, 0);
+            this.tempLayout.Controls.Add(this.tempText, 0, 0);
+            this.tempLayout.Controls.Add(this.tempUnit, 3, 0);
+            this.tempLayout.Controls.Add(this.zeroTitle, 0, 1);
+            this.tempLayout.Controls.Add(this.underZero, 2, 1);
+            this.tempLayout.Controls.Add(this.label1, 1, 0);
+            this.tempLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tempLayout.Location = new System.Drawing.Point(3, 25);
+            this.tempLayout.Name = "tempLayout";
+            this.tempLayout.RowCount = 2;
+            this.tempLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tempLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tempLayout.Size = new System.Drawing.Size(251, 100);
+            this.tempLayout.TabIndex = 5;
+            // 
+            // decTempText
+            // 
+            this.decTempText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.decTempText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.decTempText.Location = new System.Drawing.Point(78, 3);
+            this.decTempText.Name = "decTempText";
+            this.decTempText.Size = new System.Drawing.Size(44, 46);
+            this.decTempText.TabIndex = 6;
+            this.decTempText.Text = "0";
+            this.decTempText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tempText_KeyDown);
+            // 
+            // applyTemp
+            // 
+            this.applyTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.applyTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.applyTemp.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.applyTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.applyTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applyTemp.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.applyTemp.ForeColor = System.Drawing.Color.White;
+            this.applyTemp.Location = new System.Drawing.Point(173, 3);
+            this.applyTemp.Name = "applyTemp";
+            this.tempLayout.SetRowSpan(this.applyTemp, 2);
+            this.applyTemp.Size = new System.Drawing.Size(75, 94);
+            this.applyTemp.TabIndex = 0;
+            this.applyTemp.Text = "변경";
+            this.applyTemp.UseVisualStyleBackColor = false;
+            this.applyTemp.Click += new System.EventHandler(this.applyTemp_Click);
+            // 
+            // tempText
+            // 
+            this.tempText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tempText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tempText.Location = new System.Drawing.Point(3, 3);
+            this.tempText.Name = "tempText";
+            this.tempText.Size = new System.Drawing.Size(49, 46);
+            this.tempText.TabIndex = 1;
+            this.tempText.Text = "0";
+            this.tempText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tempText_KeyDown);
+            // 
+            // tempUnit
+            // 
+            this.tempUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tempUnit.AutoSize = true;
+            this.tempUnit.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tempUnit.Location = new System.Drawing.Point(128, 5);
+            this.tempUnit.Name = "tempUnit";
+            this.tempUnit.Size = new System.Drawing.Size(39, 40);
+            this.tempUnit.TabIndex = 2;
+            this.tempUnit.Text = "℃";
+            // 
+            // zeroTitle
+            // 
+            this.zeroTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.zeroTitle.AutoSize = true;
+            this.tempLayout.SetColumnSpan(this.zeroTitle, 2);
+            this.zeroTitle.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.zeroTitle.Location = new System.Drawing.Point(3, 62);
+            this.zeroTitle.Name = "zeroTitle";
+            this.zeroTitle.Size = new System.Drawing.Size(69, 25);
+            this.zeroTitle.TabIndex = 3;
+            this.zeroTitle.Text = "영하";
+            this.zeroTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // underZero
+            // 
+            this.underZero.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tempLayout.SetColumnSpan(this.underZero, 2);
+            this.underZero.Location = new System.Drawing.Point(78, 62);
+            this.underZero.Name = "underZero";
+            this.underZero.Padding = new System.Windows.Forms.Padding(1);
+            this.underZero.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.underZero.Size = new System.Drawing.Size(54, 25);
+            this.underZero.TabIndex = 4;
+            this.underZero.Text = "toggleSwitch1";
+            this.underZero.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(58, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 30);
+            this.label1.TabIndex = 5;
+            this.label1.Text = ".";
+            // 
+            // humGB
+            // 
+            this.humGB.Controls.Add(this.tableLayoutPanel1);
+            this.humGB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.humGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.humGB.Location = new System.Drawing.Point(282, 8);
+            this.humGB.Margin = new System.Windows.Forms.Padding(8);
+            this.humGB.Name = "humGB";
+            this.humGB.Size = new System.Drawing.Size(257, 128);
+            this.humGB.TabIndex = 8;
+            this.humGB.TabStop = false;
+            this.humGB.Text = "습도 변경";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.humUnit, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.humText, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.applyHumidity, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 25);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(251, 100);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // humUnit
+            // 
+            this.humUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.humUnit.AutoSize = true;
+            this.humUnit.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.humUnit.Location = new System.Drawing.Point(128, 30);
+            this.humUnit.Name = "humUnit";
+            this.humUnit.Size = new System.Drawing.Size(39, 40);
+            this.humUnit.TabIndex = 3;
+            this.humUnit.Text = "%";
+            // 
+            // humText
+            // 
+            this.humText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.humText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.humText.Location = new System.Drawing.Point(3, 27);
+            this.humText.Name = "humText";
+            this.humText.Size = new System.Drawing.Size(119, 46);
+            this.humText.TabIndex = 2;
+            this.humText.Text = "0";
+            this.humText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.humText_KeyDown);
+            // 
+            // applyHumidity
+            // 
+            this.applyHumidity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.applyHumidity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.applyHumidity.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.applyHumidity.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.applyHumidity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applyHumidity.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.applyHumidity.ForeColor = System.Drawing.Color.White;
+            this.applyHumidity.Location = new System.Drawing.Point(173, 25);
+            this.applyHumidity.Name = "applyHumidity";
+            this.applyHumidity.Size = new System.Drawing.Size(75, 50);
+            this.applyHumidity.TabIndex = 4;
+            this.applyHumidity.Text = "변경";
+            this.applyHumidity.UseVisualStyleBackColor = false;
+            this.applyHumidity.Click += new System.EventHandler(this.applyHumidity_Click);
+            // 
+            // weatherLog
+            // 
+            this.weatherLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.weatherLog.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.weatherLog.Location = new System.Drawing.Point(473, 61);
+            this.weatherLog.Name = "weatherLog";
+            this.weatherLog.Size = new System.Drawing.Size(144, 27);
+            this.weatherLog.TabIndex = 4;
+            this.weatherLog.Text = "대기";
+            // 
             // LCDTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 879);
+            this.ClientSize = new System.Drawing.Size(800, 895);
             this.Controls.Add(this.weatherBackgroundPanel);
             this.Controls.Add(this.modeBackgroundPanel);
             this.Controls.Add(this.floorBackgroundPanel);
@@ -1362,6 +1572,10 @@ namespace LCDTester
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LCDTester_FormClosing);
             this.Load += new System.EventHandler(this.LCDTester_Load);
             this.ipBackgroundLayout.ResumeLayout(false);
+            this.ipBackgroundLayout.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ipLinePanel.ResumeLayout(false);
             this.ipLayout.ResumeLayout(false);
             this.ipLayout.PerformLayout();
@@ -1369,6 +1583,9 @@ namespace LCDTester
             this.floorBtnLayout.ResumeLayout(false);
             this.arrowDoorLayout.ResumeLayout(false);
             this.doorPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rightDoor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftDoor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elevCar)).EndInit();
             this.arrowLayout.ResumeLayout(false);
             this.floorBackgroundPanel.ResumeLayout(false);
             this.floorLinePanel.ResumeLayout(false);
@@ -1378,24 +1595,21 @@ namespace LCDTester
             this.weatherBackgroundPanel.ResumeLayout(false);
             this.weatherLinePanel.ResumeLayout(false);
             this.weatherLayout.ResumeLayout(false);
-            this.weatherPicGB.ResumeLayout(false);
-            this.tempLayout.ResumeLayout(false);
-            this.tempLayout.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tempGB.ResumeLayout(false);
-            this.humGB.ResumeLayout(false);
-            this.dustGB.ResumeLayout(false);
-            this.dustLayout.ResumeLayout(false);
-            this.dustLayout.PerformLayout();
             this.stdGB.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rightDoor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftDoor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elevCar)).EndInit();
+            this.dustGB.ResumeLayout(false);
+            this.dustLayout.ResumeLayout(false);
+            this.dustLayout.PerformLayout();
+            this.weatherPicGB.ResumeLayout(false);
             this.weatherPicLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.weatherPic)).EndInit();
+            this.tempGB.ResumeLayout(false);
+            this.tempLayout.ResumeLayout(false);
+            this.tempLayout.PerformLayout();
+            this.humGB.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1467,7 +1681,7 @@ namespace LCDTester
         private System.Windows.Forms.TextBox tempText;
         private System.Windows.Forms.Label tempUnit;
         private System.Windows.Forms.Label zeroTitle;
-        private CustomControls.ToggleSwitch overZero;
+        private CustomControls.ToggleSwitch underZero;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label humUnit;
         private System.Windows.Forms.TextBox humText;
@@ -1486,6 +1700,20 @@ namespace LCDTester
         private System.Windows.Forms.Button applyDust;
         private System.Windows.Forms.TableLayoutPanel weatherPicLayout;
         private System.Windows.Forms.PictureBox weatherPic;
+        private System.Windows.Forms.TextBox decTempText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox wthrIP1;
+        private System.Windows.Forms.TextBox wthrIP2;
+        private System.Windows.Forms.TextBox wthrIP3;
+        private System.Windows.Forms.TextBox wthrIP4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button weatherIPSet;
+        public System.Windows.Forms.TextBox weatherLog;
     }
 }
 

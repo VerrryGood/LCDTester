@@ -38,6 +38,9 @@ namespace LCDTester
         private FloorSendClient floorDataSendClient;
         private bool serverOn = false;
 
+        private int weatherPort = 7000;
+        private WeatherSendClient weatherDataSendClient;
+
         private int selectedFloor = 1;
         public int SelectedFloor
         {
@@ -83,6 +86,10 @@ namespace LCDTester
         private string[] ips;
         private byte[] byteIP;
 
+        private string weatherIP = "127.0.0.1";
+        private string[] weatherIPs;
+        private byte[] weatherByteIP;
+
         private BitArray arrowDisplay = new BitArray(8);
         private BitArray status0 = new BitArray(8);
         private BitArray status1 = new BitArray(8);
@@ -102,7 +109,14 @@ namespace LCDTester
             ipText3.Text = ips[2];
             ipText4.Text = ips[3];
 
+            weatherIPs = weatherIP.Split('.');
+            wthrIP1.Text = weatherIPs[0];
+            wthrIP2.Text = weatherIPs[1];
+            wthrIP3.Text = weatherIPs[2];
+            wthrIP4.Text = weatherIPs[3];
+
             floorDataSendClient = new FloorSendClient(floorPort);
+            weatherDataSendClient = new WeatherSendClient(weatherPort);
 
             windowBar = new WindowBar(this);
             windowBarPanel.Controls.Add(windowBar);
@@ -115,6 +129,13 @@ namespace LCDTester
             MakeLCDDataFirstTime();
             MakeElevDataFirstTime();
             testerManager.MakeDatatoByte();
+
+            MakeProtocolDataFirstTime();
+            MakeWeatherDataFirstTime();
+            testerManager.MakeWeatherToByte();
+
+            MakeCloseDataFirstTime();
+            testerManager.MakeCloseToByte();
         }
 
         private void ReadSettings(string fullName)
@@ -127,12 +148,23 @@ namespace LCDTester
                 if (!string.IsNullOrEmpty(sb.ToString()))
                     myIP = sb.ToString();
 
-                BasicFunction.GetPrivateProfileString(CommonValues.baseTitle, CommonValues.portText, string.Empty, sb, 32, fullName);
+                BasicFunction.GetPrivateProfileString(CommonValues.baseTitle, CommonValues.weatherIPText, string.Empty, sb, 32, fullName);
                 if (!string.IsNullOrEmpty(sb.ToString()))
-                    floorPort = int.Parse(sb.ToString());
+                    weatherIP = sb.ToString();
+
+                BasicFunction.GetPrivateProfileString(CommonValues.baseTitle, CommonValues.floorPortText, string.Empty, sb, 32, fullName);
+                if (!string.IsNullOrEmpty(sb.ToString()))
+                    if (int.TryParse(sb.ToString(), out _))
+                        floorPort = int.Parse(sb.ToString());
+
+                BasicFunction.GetPrivateProfileString(CommonValues.baseTitle, CommonValues.weatherPortText, string.Empty, sb, 32, fullName);
+                if (!string.IsNullOrEmpty(sb.ToString()))
+                    if (int.TryParse(sb.ToString(), out _))
+                        weatherPort = int.Parse(sb.ToString());
             }
         }
 
+        #region 프로그램 실행 시 데이터 첫 세팅 동작
         private void MakeLCDDataFirstTime()
         {
             CommonValues.lcdData.crtDisplayCounter = 3;
@@ -160,6 +192,32 @@ namespace LCDTester
             CommonValues.elevData.protocolKind = (byte)CommFunction.PROTOCOLKIND.SAMIL;
         }
 
+        private void MakeWeatherDataFirstTime()
+        {
+            CommonValues.weatherData.weatherPic = 1;
+            CommonValues.weatherData.tempMinus = 0;
+            CommonValues.weatherData.temperature = 0;
+            CommonValues.weatherData.decTemp = 0;
+            CommonValues.weatherData.humidity = 0;
+            CommonValues.weatherData.dust = 0;
+            CommonValues.weatherData.percent = 0;
+            CommonValues.weatherData.standard = 100;
+        }
+
+        private void MakeProtocolDataFirstTime()
+        {
+            CommonValues.protocolData.opCode = (byte)CommFunction.OPCODE.WEATHERINFO;
+            WeatherIPtoByte();
+            CommonValues.protocolData.equipKind = (byte)CommFunction.EQUIPKIND.LCDSCREEN;
+        }
+
+        private void MakeCloseDataFirstTime()
+        {
+            CommonValues.closeData.opCode = (byte)CommFunction.OPCODE.COMMCLOSE;
+            CommonValues.closeData.equipKind = (byte)CommFunction.EQUIPKIND.LCDSCREEN;
+        }
+        #endregion
+
         #region IP 변경
         private void IPtoByte()
         {
@@ -180,6 +238,29 @@ namespace LCDTester
             myIP = string.Join(".", ipText1.Text, ipText2.Text, ipText3.Text, ipText4.Text);
             IPtoByte();
             testerManager.MakeDatatoByte();
+        }
+
+        private void WeatherIPtoByte()
+        {
+            weatherIPs = weatherIP.Split('.');
+            weatherByteIP = weatherIPs.Select(byte.Parse).ToArray();
+            Array.Reverse(weatherByteIP);
+            CommonValues.protocolData.sourceIP = weatherByteIP;
+            CommonValues.closeData.sourceIP = weatherByteIP;
+        }
+
+        private void ChangeWeatherIP(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                weatherIPSet.PerformClick();
+        }
+
+        private void weatherIPSet_Click(object sender, EventArgs e)
+        {
+            weatherIP = string.Join(".", wthrIP1.Text, wthrIP2.Text, wthrIP3.Text, wthrIP4.Text);
+            WeatherIPtoByte();
+            testerManager.MakeWeatherToByte();
+            testerManager.MakeCloseToByte();
         }
         #endregion
 
@@ -462,6 +543,7 @@ namespace LCDTester
         {
             floorDataSendClient.Stop();
             BasicFunction.WritePrivateProfileString(CommonValues.baseTitle, CommonValues.ipText, myIP, currentDir + iniName);
+            BasicFunction.WritePrivateProfileString(CommonValues.baseTitle, CommonValues.weatherIPText, weatherIP, currentDir + iniName);
         }
 
         private void weatherPic_Click(object sender, EventArgs e)
@@ -469,7 +551,9 @@ namespace LCDTester
             if (setWeatherPicWindow.ShowDialog() == DialogResult.OK)
             {
                 ChangeWeatherPic();
-                
+                CommonValues.weatherData.weatherPic = Convert.ToByte(CommonValues.picIndex);
+                testerManager.MakeWeatherToByte();
+                weatherDataSendClient.SendWeather();
             }
         }
 
@@ -598,6 +682,84 @@ namespace LCDTester
                     weatherPic.Image = Properties.Resources.w_40;
                     break;
             }
+        }
+
+        private void applyTemp_Click(object sender, EventArgs e)
+        {
+            if (underZero.Checked)
+                CommonValues.weatherData.tempMinus = 0xFF;
+            else
+                CommonValues.weatherData.tempMinus = 0;
+
+            if (byte.TryParse(tempText.Text, out _))
+                CommonValues.weatherData.temperature = byte.Parse(tempText.Text);
+            else
+                MessageBox.Show("기온 입력 칸에는 숫자만 입력하여 주십시오.");
+
+            if (byte.TryParse(decTempText.Text, out _))
+                CommonValues.weatherData.decTemp = byte.Parse(decTempText.Text);
+            else
+                MessageBox.Show("기온 입력 칸에는 숫자만 입력하여 주십시오.");
+
+            testerManager.MakeWeatherToByte();
+            weatherDataSendClient.SendWeather();
+        }
+
+        private void tempText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                applyTemp.PerformClick();
+        }
+
+        private void applyHumidity_Click(object sender, EventArgs e)
+        {
+            if (byte.TryParse(humText.Text, out _))
+                CommonValues.weatherData.humidity = byte.Parse(humText.Text);
+            else
+                MessageBox.Show("습도 입력 칸에는 숫자만 입력하여 주십시오.");
+
+            testerManager.MakeWeatherToByte();
+            weatherDataSendClient.SendWeather();
+        }
+
+        private void humText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                applyHumidity.PerformClick();
+        }
+
+        private void applyDust_Click(object sender, EventArgs e)
+        {
+            if (byte.TryParse(dustText.Text, out _))
+                CommonValues.weatherData.dust = byte.Parse(dustText.Text);
+            else
+                MessageBox.Show("미세먼지 입력 칸에는 숫자만 입력하여 주십시오.");
+
+            testerManager.MakeWeatherToByte();
+            weatherDataSendClient.SendWeather();
+        }
+
+        private void dustText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                applyDust.PerformClick();
+        }
+
+        private void applyStandard_Click(object sender, EventArgs e)
+        {
+            if (byte.TryParse(stdText.Text, out _))
+                CommonValues.weatherData.percent = byte.Parse(stdText.Text);
+            else
+                MessageBox.Show("법적 기준 입력 칸에는 숫자만 입력하여 주십시오.");
+
+            testerManager.MakeWeatherToByte();
+            weatherDataSendClient.SendWeather();
+        }
+
+        private void stdText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                applyStandard.PerformClick();
         }
     }
 }

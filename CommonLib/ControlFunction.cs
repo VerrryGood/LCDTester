@@ -95,5 +95,18 @@ namespace CommonLib
                     picBox.Click -= func;
             }
         }
+
+        public static void ChangeText(TextBox textBox, string text)
+        {
+            if (textBox.InvokeRequired)
+            {
+                textBox.BeginInvoke(new MethodInvoker(delegate ()
+                {
+                    textBox.Text = text;
+                }));
+            }
+            else
+                textBox.Text = text;
+        }
     }
 }

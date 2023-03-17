@@ -63,6 +63,27 @@ namespace LCDTester
             }
         }
 
+        public void MakeWeatherToByte()
+        {
+            byte[] tempByte = CommFunction.ConvertStrToByte(CommonValues.weatherData);
+            CommonValues.protocolData.data = CommFunction.AdjustByteLength(tempByte, 84);
+
+            lock (lockObject)
+            {
+                CommonValues.weatherByteData = CommFunction.ConvertStrToByte(CommonValues.protocolData);
+                CommonValues.weatherByteData = CommFunction.MakeFrame(CommonValues.weatherByteData);
+            }
+        }
+
+        public void MakeCloseToByte()
+        {
+            lock (lockObject)
+            {
+                CommonValues.closeByteData = CommFunction.ConvertStrToByte(CommonValues.closeData);
+                CommonValues.closeByteData = CommFunction.MakeFrame(CommonValues.closeByteData);
+            }
+        }
+
         private void MoveFloorUp(int preFloor, int moveFloor)
         {
             controlForm.ChangeArrowUp(true);
@@ -140,6 +161,11 @@ namespace LCDTester
         {
             ControlFunction.ChangeEnabled(controlForm.testerOnOff, true);
             ControlFunction.ChangeEnabled(controlForm.floorBackgroundLayout, true);
+        }
+
+        public void WriteStatus(string text)
+        {
+            ControlFunction.ChangeText(controlForm.weatherLog, text);
         }
     }
 }
