@@ -16,7 +16,7 @@ namespace LCDTester
         private IPEndPoint serverEndPoint;
         private int floorPort;
 
-        private Timers.Timer sendTimer = new Timers.Timer(200);
+        private Timers.Timer sendTimer = new Timers.Timer(500);
 
         public FloorSendClient(int port)
         {

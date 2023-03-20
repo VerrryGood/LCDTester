@@ -54,6 +54,7 @@ namespace LCDTester
             this.ipTitle = new System.Windows.Forms.Label();
             this.ipSet = new System.Windows.Forms.Button();
             this.testerOnOff = new System.Windows.Forms.Button();
+            this.weatherLog = new System.Windows.Forms.TextBox();
             this.floorBackgroundLayout = new System.Windows.Forms.TableLayoutPanel();
             this.floorBtnLayout = new System.Windows.Forms.TableLayoutPanel();
             this.twelfthFloor = new System.Windows.Forms.Button();
@@ -126,7 +127,6 @@ namespace LCDTester
             this.humUnit = new System.Windows.Forms.Label();
             this.humText = new System.Windows.Forms.TextBox();
             this.applyHumidity = new System.Windows.Forms.Button();
-            this.weatherLog = new System.Windows.Forms.TextBox();
             this.ipBackgroundLayout.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -213,7 +213,7 @@ namespace LCDTester
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 2, 0);
@@ -358,7 +358,7 @@ namespace LCDTester
             this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.ipLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.ipLayout.Controls.Add(this.ipSplit3, 6, 0);
             this.ipLayout.Controls.Add(this.ipSplit2, 4, 0);
             this.ipLayout.Controls.Add(this.ipSplit1, 2, 0);
@@ -497,6 +497,16 @@ namespace LCDTester
             this.testerOnOff.Text = "서버 시작";
             this.testerOnOff.UseVisualStyleBackColor = false;
             this.testerOnOff.Click += new System.EventHandler(this.testerOnOff_Click);
+            // 
+            // weatherLog
+            // 
+            this.weatherLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.weatherLog.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.weatherLog.Location = new System.Drawing.Point(473, 61);
+            this.weatherLog.Name = "weatherLog";
+            this.weatherLog.Size = new System.Drawing.Size(144, 27);
+            this.weatherLog.TabIndex = 4;
+            this.weatherLog.Text = "대기";
             // 
             // floorBackgroundLayout
             // 
@@ -1541,16 +1551,6 @@ namespace LCDTester
             this.applyHumidity.Text = "변경";
             this.applyHumidity.UseVisualStyleBackColor = false;
             this.applyHumidity.Click += new System.EventHandler(this.applyHumidity_Click);
-            // 
-            // weatherLog
-            // 
-            this.weatherLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.weatherLog.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.weatherLog.Location = new System.Drawing.Point(473, 61);
-            this.weatherLog.Name = "weatherLog";
-            this.weatherLog.Size = new System.Drawing.Size(144, 27);
-            this.weatherLog.TabIndex = 4;
-            this.weatherLog.Text = "대기";
             // 
             // LCDTester
             // 
