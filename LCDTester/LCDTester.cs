@@ -79,6 +79,32 @@ namespace LCDTester
         }
         private Button preMode;
 
+        private bool overLoad = false;
+        public bool OverLoad
+        {
+            set
+            {
+                if (overLoad != value)
+                {
+                    overLoad = value;
+                    ChangeOverLoadButton();
+                }
+            }
+        }
+        private bool full = false;
+        public bool Full
+        {
+            set
+            {
+                if (full != value)
+                {
+                    full = value;
+                    ChangeFullButtion();
+                }
+            }
+        }
+        private int errorCode;
+
         private bool arrowUp = false;
         private bool arrowDown = false;
 
@@ -93,6 +119,7 @@ namespace LCDTester
         private BitArray arrowDisplay = new BitArray(8);
         private BitArray status0 = new BitArray(8);
         private BitArray status1 = new BitArray(8);
+        private BitArray opbInput1 = new BitArray(8);
 
         private bool doorOpened = false;
         private Timers.Timer openTimer = new Timers.Timer(10);
@@ -172,14 +199,18 @@ namespace LCDTester
             CommonValues.lcdData.crtArrow = 0;
             CommonValues.lcdData.crtStatus0 = 0;
             CommonValues.lcdData.crtStatus1 = 0;
-            byte[] tempByte = new byte[6];
-            CommonValues.lcdData.elseData1 = tempByte;
+            CommonValues.lcdData.crtStatus4 = 0;
+            CommonValues.lcdData.crtOpbOutput2 = 0;
+            CommonValues.lcdData.crtOpbInput1 = 0;
+            CommonValues.lcdData.crtErrorCode1 = 0;
+            CommonValues.lcdData.crtErrorCode2 = 0;
+            CommonValues.lcdData.crtCommonData2 = 0;
             CommonValues.lcdData.crtActionNum = (byte)CommFunction.ACTIONNUMBER.CLOSED;
             CommonValues.lcdData.thousandChar = 0x00;
             CommonValues.lcdData.hundredChar = 0x00;
             CommonValues.lcdData.tenthChar = 0x20;
             CommonValues.lcdData.firstChar = 0x31;
-            tempByte = new byte[68];
+            byte[] tempByte = new byte[68];
             CommonValues.lcdData.elseData2 = tempByte;
         }
 
@@ -760,6 +791,98 @@ namespace LCDTester
         {
             if (e.KeyCode == Keys.Enter)
                 applyStandard.PerformClick();
+        }
+
+        private void ChangeWeightStatus()
+        {
+            opbInput1[4] = overLoad;
+            opbInput1[5] = full;
+            CommonValues.lcdData.crtOpbInput1 = BasicFunction.ConvertBitToByte(opbInput1);
+            testerManager.MakeDatatoByte();
+        }
+
+        private void ChangeOverLoadButton()
+        {
+            if (overLoad)
+            {
+                overLoadONOFF.BackColor = CommonValues.floorSelectColor;
+                overLoadONOFF.ForeColor = Color.White;
+                overLoadONOFF.Text = "OVERLOAD ON";
+            }
+            else
+            {
+                overLoadONOFF.BackColor = Color.White;
+                overLoadONOFF.ForeColor = ForeColor;
+                overLoadONOFF.Text = "OVERLOAD OFF";
+            }
+        }
+
+        private void ChangeFullButtion()
+        {
+            if (full)
+            {
+                fullONOFF.BackColor = CommonValues.floorSelectColor;
+                fullONOFF.ForeColor = Color.White;
+                fullONOFF.Text = "FULL ON";
+            }
+            else
+            {
+                fullONOFF.BackColor = Color.White;
+                fullONOFF.ForeColor = ForeColor;
+                fullONOFF.Text = "FULL OFF";
+            }
+        }
+
+        private void overLoadONOFF_Click(object sender, EventArgs e)
+        {
+            if (overLoad)
+                OverLoad = false;
+            else
+                OverLoad = true;
+
+            if (full)
+                Full = false;
+
+            ChangeWeightStatus();
+        }
+
+        private void fullONOFF_Click(object sender, EventArgs e)
+        {
+            if (full)
+                Full = false;
+            else
+                Full = true;
+
+            if (overLoad)
+                OverLoad = false;
+
+            ChangeWeightStatus();
+        }
+
+        private void applyErrorCode_Click(object sender, EventArgs e)
+        {
+            MakeErrorCode();
+        }
+
+        private void MakeErrorCode()
+        {
+            if (int.TryParse(errCodeText.Text, out errorCode))
+            {
+                if (errorCode > 255)
+                {
+                    CommonValues.lcdData.crtErrorCode1 = (byte)(errorCode % 256);
+                    CommonValues.lcdData.crtErrorCode2 = (byte)(errorCode / 256);
+                }
+                else
+                {
+                    CommonValues.lcdData.crtErrorCode1 = 0;
+                    CommonValues.lcdData.crtErrorCode2 = (byte)errorCode;
+                }
+
+                testerManager.MakeDatatoByte();
+            }
+            else
+                MessageBox.Show("숫자만 입력하여 주십시오", "오류");
         }
     }
 }

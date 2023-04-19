@@ -55,8 +55,12 @@ namespace CommonLib
             public byte crtArrow;
             public byte crtStatus0;
             public byte crtStatus1;
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
-            public byte[] elseData1;
+            public byte crtStatus4;
+            public byte crtOpbOutput2;
+            public byte crtOpbInput1;
+            public byte crtErrorCode1;
+            public byte crtErrorCode2;
+            public byte crtCommonData2;
             public byte crtActionNum;
             public byte thousandChar;
             public byte hundredChar;
@@ -93,7 +97,8 @@ namespace CommonLib
             ALIVEMSG = 3,
             FIRECONTROL = 4,
             EQCONTROL = 5,
-            ELEVFLOOR = 21,
+            //ELEVFLOOR = 21,
+            ELEVFLOOR = 11,
             WEATHERINFO = 31,
             ELECINFO = 32,
             CARTALRMINFO = 33,
@@ -140,6 +145,12 @@ namespace CommonLib
             MOVING = 21
         }
 
+        public enum OPBINPUT1 : byte
+        {
+            OVERLOAD = 16,
+            FULL = 32
+        }
+
         public enum ACTIONNUMBER : byte
         {
             OPENED = 6,
@@ -161,7 +172,7 @@ namespace CommonLib
 
             int checkSum = CalculateCheckSum(packet, actualLength);
             byte lowByte = (byte)(checkSum / 256);
-            byte highByte = (byte)(checkSum - (lowByte * 256));
+            byte highByte = (byte)(checkSum % 256);
             if (lowByte != packet[actualLength - 3] || highByte != packet[actualLength - 4])
                 return null;
 
@@ -183,7 +194,7 @@ namespace CommonLib
             if (makeLength > 255)
             {
                 makePacket[3] = (byte)(makeLength / 256);
-                makePacket[2] = (byte)(makeLength - (makePacket[3] * 256));
+                makePacket[2] = (byte)(makeLength % 256);
             }
             else
             {
@@ -200,7 +211,7 @@ namespace CommonLib
             if (checkSum > 255)
             {
                 makePacket[makeLength - 3] = (byte)(checkSum / 256);
-                makePacket[makeLength - 4] = (byte)(checkSum - (makePacket[makeLength - 3] * 256));
+                makePacket[makeLength - 4] = (byte)(checkSum % 256);
             }
             else
             {

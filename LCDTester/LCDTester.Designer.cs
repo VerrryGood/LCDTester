@@ -120,13 +120,22 @@ namespace LCDTester
             this.tempText = new System.Windows.Forms.TextBox();
             this.tempUnit = new System.Windows.Forms.Label();
             this.zeroTitle = new System.Windows.Forms.Label();
-            this.underZero = new CustomControls.ToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
             this.humGB = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.humUnit = new System.Windows.Forms.Label();
             this.humText = new System.Windows.Forms.TextBox();
             this.applyHumidity = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.errorGB = new System.Windows.Forms.GroupBox();
+            this.underZero = new CustomControls.ToggleSwitch();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.errCodeText = new System.Windows.Forms.TextBox();
+            this.applyErrorCode = new System.Windows.Forms.Button();
+            this.overLoadONOFF = new System.Windows.Forms.Button();
+            this.fullONOFF = new System.Windows.Forms.Button();
             this.ipBackgroundLayout.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -159,6 +168,11 @@ namespace LCDTester
             this.tempLayout.SuspendLayout();
             this.humGB.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.errorGB.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // windowBarPanel
@@ -186,7 +200,7 @@ namespace LCDTester
             this.ipBackgroundLayout.RowCount = 2;
             this.ipBackgroundLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.ipBackgroundLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ipBackgroundLayout.Size = new System.Drawing.Size(800, 100);
+            this.ipBackgroundLayout.Size = new System.Drawing.Size(800, 94);
             this.ipBackgroundLayout.TabIndex = 1;
             // 
             // panel7
@@ -194,11 +208,11 @@ namespace LCDTester
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
             this.panel7.Controls.Add(this.tableLayoutPanel2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(5, 55);
+            this.panel7.Location = new System.Drawing.Point(5, 52);
             this.panel7.Margin = new System.Windows.Forms.Padding(5);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(1);
-            this.panel7.Size = new System.Drawing.Size(460, 40);
+            this.panel7.Size = new System.Drawing.Size(460, 37);
             this.panel7.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -228,7 +242,7 @@ namespace LCDTester
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(458, 38);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(458, 35);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label2
@@ -236,7 +250,7 @@ namespace LCDTester
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(298, 8);
+            this.label2.Location = new System.Drawing.Point(298, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 21);
             this.label2.TabIndex = 8;
@@ -248,7 +262,7 @@ namespace LCDTester
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(223, 8);
+            this.label3.Location = new System.Drawing.Point(223, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 21);
             this.label3.TabIndex = 7;
@@ -260,7 +274,7 @@ namespace LCDTester
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(148, 8);
+            this.label4.Location = new System.Drawing.Point(148, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 21);
             this.label4.TabIndex = 6;
@@ -271,7 +285,7 @@ namespace LCDTester
             // 
             this.wthrIP1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.wthrIP1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wthrIP1.Location = new System.Drawing.Point(93, 4);
+            this.wthrIP1.Location = new System.Drawing.Point(93, 3);
             this.wthrIP1.Name = "wthrIP1";
             this.wthrIP1.Size = new System.Drawing.Size(49, 29);
             this.wthrIP1.TabIndex = 0;
@@ -282,7 +296,7 @@ namespace LCDTester
             // 
             this.wthrIP2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.wthrIP2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wthrIP2.Location = new System.Drawing.Point(168, 4);
+            this.wthrIP2.Location = new System.Drawing.Point(168, 3);
             this.wthrIP2.Name = "wthrIP2";
             this.wthrIP2.Size = new System.Drawing.Size(49, 29);
             this.wthrIP2.TabIndex = 1;
@@ -293,7 +307,7 @@ namespace LCDTester
             // 
             this.wthrIP3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.wthrIP3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wthrIP3.Location = new System.Drawing.Point(243, 4);
+            this.wthrIP3.Location = new System.Drawing.Point(243, 3);
             this.wthrIP3.Name = "wthrIP3";
             this.wthrIP3.Size = new System.Drawing.Size(49, 29);
             this.wthrIP3.TabIndex = 2;
@@ -304,7 +318,7 @@ namespace LCDTester
             // 
             this.wthrIP4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.wthrIP4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wthrIP4.Location = new System.Drawing.Point(318, 4);
+            this.wthrIP4.Location = new System.Drawing.Point(318, 3);
             this.wthrIP4.Name = "wthrIP4";
             this.wthrIP4.Size = new System.Drawing.Size(49, 29);
             this.wthrIP4.TabIndex = 3;
@@ -316,7 +330,7 @@ namespace LCDTester
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(3, 8);
+            this.label5.Location = new System.Drawing.Point(3, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 21);
             this.label5.TabIndex = 4;
@@ -328,7 +342,7 @@ namespace LCDTester
             this.weatherIPSet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.weatherIPSet.Location = new System.Drawing.Point(376, 3);
             this.weatherIPSet.Name = "weatherIPSet";
-            this.weatherIPSet.Size = new System.Drawing.Size(75, 32);
+            this.weatherIPSet.Size = new System.Drawing.Size(75, 29);
             this.weatherIPSet.TabIndex = 5;
             this.weatherIPSet.Text = "변경";
             this.weatherIPSet.UseVisualStyleBackColor = true;
@@ -343,7 +357,7 @@ namespace LCDTester
             this.ipLinePanel.Margin = new System.Windows.Forms.Padding(5);
             this.ipLinePanel.Name = "ipLinePanel";
             this.ipLinePanel.Padding = new System.Windows.Forms.Padding(1);
-            this.ipLinePanel.Size = new System.Drawing.Size(460, 40);
+            this.ipLinePanel.Size = new System.Drawing.Size(460, 37);
             this.ipLinePanel.TabIndex = 0;
             // 
             // ipLayout
@@ -373,7 +387,7 @@ namespace LCDTester
             this.ipLayout.Name = "ipLayout";
             this.ipLayout.RowCount = 1;
             this.ipLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ipLayout.Size = new System.Drawing.Size(458, 38);
+            this.ipLayout.Size = new System.Drawing.Size(458, 35);
             this.ipLayout.TabIndex = 0;
             // 
             // ipSplit3
@@ -381,7 +395,7 @@ namespace LCDTester
             this.ipSplit3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipSplit3.AutoSize = true;
             this.ipSplit3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipSplit3.Location = new System.Drawing.Point(298, 8);
+            this.ipSplit3.Location = new System.Drawing.Point(298, 7);
             this.ipSplit3.Name = "ipSplit3";
             this.ipSplit3.Size = new System.Drawing.Size(14, 21);
             this.ipSplit3.TabIndex = 8;
@@ -393,7 +407,7 @@ namespace LCDTester
             this.ipSplit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipSplit2.AutoSize = true;
             this.ipSplit2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipSplit2.Location = new System.Drawing.Point(223, 8);
+            this.ipSplit2.Location = new System.Drawing.Point(223, 7);
             this.ipSplit2.Name = "ipSplit2";
             this.ipSplit2.Size = new System.Drawing.Size(14, 21);
             this.ipSplit2.TabIndex = 7;
@@ -405,7 +419,7 @@ namespace LCDTester
             this.ipSplit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipSplit1.AutoSize = true;
             this.ipSplit1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipSplit1.Location = new System.Drawing.Point(148, 8);
+            this.ipSplit1.Location = new System.Drawing.Point(148, 7);
             this.ipSplit1.Name = "ipSplit1";
             this.ipSplit1.Size = new System.Drawing.Size(14, 21);
             this.ipSplit1.TabIndex = 6;
@@ -416,7 +430,7 @@ namespace LCDTester
             // 
             this.ipText1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText1.Location = new System.Drawing.Point(93, 4);
+            this.ipText1.Location = new System.Drawing.Point(93, 3);
             this.ipText1.Name = "ipText1";
             this.ipText1.Size = new System.Drawing.Size(49, 29);
             this.ipText1.TabIndex = 0;
@@ -427,7 +441,7 @@ namespace LCDTester
             // 
             this.ipText2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText2.Location = new System.Drawing.Point(168, 4);
+            this.ipText2.Location = new System.Drawing.Point(168, 3);
             this.ipText2.Name = "ipText2";
             this.ipText2.Size = new System.Drawing.Size(49, 29);
             this.ipText2.TabIndex = 1;
@@ -438,7 +452,7 @@ namespace LCDTester
             // 
             this.ipText3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText3.Location = new System.Drawing.Point(243, 4);
+            this.ipText3.Location = new System.Drawing.Point(243, 3);
             this.ipText3.Name = "ipText3";
             this.ipText3.Size = new System.Drawing.Size(49, 29);
             this.ipText3.TabIndex = 2;
@@ -449,7 +463,7 @@ namespace LCDTester
             // 
             this.ipText4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipText4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipText4.Location = new System.Drawing.Point(318, 4);
+            this.ipText4.Location = new System.Drawing.Point(318, 3);
             this.ipText4.Name = "ipText4";
             this.ipText4.Size = new System.Drawing.Size(49, 29);
             this.ipText4.TabIndex = 3;
@@ -461,7 +475,7 @@ namespace LCDTester
             this.ipTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ipTitle.AutoSize = true;
             this.ipTitle.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ipTitle.Location = new System.Drawing.Point(3, 8);
+            this.ipTitle.Location = new System.Drawing.Point(3, 7);
             this.ipTitle.Name = "ipTitle";
             this.ipTitle.Size = new System.Drawing.Size(84, 21);
             this.ipTitle.TabIndex = 4;
@@ -473,7 +487,7 @@ namespace LCDTester
             this.ipSet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ipSet.Location = new System.Drawing.Point(376, 3);
             this.ipSet.Name = "ipSet";
-            this.ipSet.Size = new System.Drawing.Size(75, 32);
+            this.ipSet.Size = new System.Drawing.Size(75, 29);
             this.ipSet.TabIndex = 5;
             this.ipSet.Text = "변경";
             this.ipSet.UseVisualStyleBackColor = true;
@@ -491,7 +505,7 @@ namespace LCDTester
             this.testerOnOff.Margin = new System.Windows.Forms.Padding(5, 5, 10, 5);
             this.testerOnOff.Name = "testerOnOff";
             this.ipBackgroundLayout.SetRowSpan(this.testerOnOff, 2);
-            this.testerOnOff.Size = new System.Drawing.Size(165, 90);
+            this.testerOnOff.Size = new System.Drawing.Size(165, 84);
             this.testerOnOff.TabIndex = 1;
             this.testerOnOff.TabStop = false;
             this.testerOnOff.Text = "서버 시작";
@@ -502,7 +516,7 @@ namespace LCDTester
             // 
             this.weatherLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.weatherLog.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.weatherLog.Location = new System.Drawing.Point(473, 61);
+            this.weatherLog.Location = new System.Drawing.Point(473, 57);
             this.weatherLog.Name = "weatherLog";
             this.weatherLog.Size = new System.Drawing.Size(144, 27);
             this.weatherLog.TabIndex = 4;
@@ -934,7 +948,7 @@ namespace LCDTester
             // 
             this.floorBackgroundPanel.Controls.Add(this.floorLinePanel);
             this.floorBackgroundPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.floorBackgroundPanel.Location = new System.Drawing.Point(0, 135);
+            this.floorBackgroundPanel.Location = new System.Drawing.Point(0, 129);
             this.floorBackgroundPanel.Name = "floorBackgroundPanel";
             this.floorBackgroundPanel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.floorBackgroundPanel.Size = new System.Drawing.Size(800, 354);
@@ -955,10 +969,10 @@ namespace LCDTester
             // 
             this.modeBackgroundPanel.Controls.Add(this.modeLinePanel);
             this.modeBackgroundPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.modeBackgroundPanel.Location = new System.Drawing.Point(0, 489);
+            this.modeBackgroundPanel.Location = new System.Drawing.Point(0, 483);
             this.modeBackgroundPanel.Name = "modeBackgroundPanel";
             this.modeBackgroundPanel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.modeBackgroundPanel.Size = new System.Drawing.Size(800, 147);
+            this.modeBackgroundPanel.Size = new System.Drawing.Size(800, 122);
             this.modeBackgroundPanel.TabIndex = 4;
             // 
             // modeLinePanel
@@ -969,7 +983,7 @@ namespace LCDTester
             this.modeLinePanel.Location = new System.Drawing.Point(10, 5);
             this.modeLinePanel.Name = "modeLinePanel";
             this.modeLinePanel.Padding = new System.Windows.Forms.Padding(1);
-            this.modeLinePanel.Size = new System.Drawing.Size(780, 137);
+            this.modeLinePanel.Size = new System.Drawing.Size(780, 112);
             this.modeLinePanel.TabIndex = 0;
             // 
             // modeLayout
@@ -994,7 +1008,7 @@ namespace LCDTester
             this.modeLayout.Padding = new System.Windows.Forms.Padding(1);
             this.modeLayout.RowCount = 1;
             this.modeLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.modeLayout.Size = new System.Drawing.Size(778, 135);
+            this.modeLayout.Size = new System.Drawing.Size(778, 110);
             this.modeLayout.TabIndex = 0;
             // 
             // movingBtn
@@ -1005,7 +1019,7 @@ namespace LCDTester
             this.movingBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.movingBtn.Location = new System.Drawing.Point(649, 4);
             this.movingBtn.Name = "movingBtn";
-            this.movingBtn.Size = new System.Drawing.Size(123, 127);
+            this.movingBtn.Size = new System.Drawing.Size(123, 102);
             this.movingBtn.TabIndex = 5;
             this.movingBtn.Text = "이사";
             this.movingBtn.UseVisualStyleBackColor = true;
@@ -1019,7 +1033,7 @@ namespace LCDTester
             this.earthquakeBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.earthquakeBtn.Location = new System.Drawing.Point(520, 4);
             this.earthquakeBtn.Name = "earthquakeBtn";
-            this.earthquakeBtn.Size = new System.Drawing.Size(123, 127);
+            this.earthquakeBtn.Size = new System.Drawing.Size(123, 102);
             this.earthquakeBtn.TabIndex = 4;
             this.earthquakeBtn.Text = "지진";
             this.earthquakeBtn.UseVisualStyleBackColor = true;
@@ -1033,7 +1047,7 @@ namespace LCDTester
             this.fireBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.fireBtn.Location = new System.Drawing.Point(391, 4);
             this.fireBtn.Name = "fireBtn";
-            this.fireBtn.Size = new System.Drawing.Size(123, 127);
+            this.fireBtn.Size = new System.Drawing.Size(123, 102);
             this.fireBtn.TabIndex = 3;
             this.fireBtn.Text = "화재";
             this.fireBtn.UseVisualStyleBackColor = true;
@@ -1047,7 +1061,7 @@ namespace LCDTester
             this.parkingBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.parkingBtn.Location = new System.Drawing.Point(262, 4);
             this.parkingBtn.Name = "parkingBtn";
-            this.parkingBtn.Size = new System.Drawing.Size(123, 127);
+            this.parkingBtn.Size = new System.Drawing.Size(123, 102);
             this.parkingBtn.TabIndex = 2;
             this.parkingBtn.Text = "파킹";
             this.parkingBtn.UseVisualStyleBackColor = true;
@@ -1061,7 +1075,7 @@ namespace LCDTester
             this.maintenanceBtn.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.maintenanceBtn.Location = new System.Drawing.Point(133, 4);
             this.maintenanceBtn.Name = "maintenanceBtn";
-            this.maintenanceBtn.Size = new System.Drawing.Size(123, 127);
+            this.maintenanceBtn.Size = new System.Drawing.Size(123, 102);
             this.maintenanceBtn.TabIndex = 1;
             this.maintenanceBtn.Text = "점검";
             this.maintenanceBtn.UseVisualStyleBackColor = true;
@@ -1077,7 +1091,7 @@ namespace LCDTester
             this.normalBtn.ForeColor = System.Drawing.Color.White;
             this.normalBtn.Location = new System.Drawing.Point(4, 4);
             this.normalBtn.Name = "normalBtn";
-            this.normalBtn.Size = new System.Drawing.Size(123, 127);
+            this.normalBtn.Size = new System.Drawing.Size(123, 102);
             this.normalBtn.TabIndex = 0;
             this.normalBtn.Text = "정상";
             this.normalBtn.UseVisualStyleBackColor = false;
@@ -1086,8 +1100,8 @@ namespace LCDTester
             // weatherBackgroundPanel
             // 
             this.weatherBackgroundPanel.Controls.Add(this.weatherLinePanel);
-            this.weatherBackgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weatherBackgroundPanel.Location = new System.Drawing.Point(0, 636);
+            this.weatherBackgroundPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.weatherBackgroundPanel.Location = new System.Drawing.Point(0, 721);
             this.weatherBackgroundPanel.Name = "weatherBackgroundPanel";
             this.weatherBackgroundPanel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.weatherBackgroundPanel.Size = new System.Drawing.Size(800, 259);
@@ -1456,19 +1470,6 @@ namespace LCDTester
             this.zeroTitle.Text = "영하";
             this.zeroTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // underZero
-            // 
-            this.underZero.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tempLayout.SetColumnSpan(this.underZero, 2);
-            this.underZero.Location = new System.Drawing.Point(78, 62);
-            this.underZero.Name = "underZero";
-            this.underZero.Padding = new System.Windows.Forms.Padding(1);
-            this.underZero.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.underZero.Size = new System.Drawing.Size(54, 25);
-            this.underZero.TabIndex = 4;
-            this.underZero.Text = "toggleSwitch1";
-            this.underZero.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -1552,11 +1553,154 @@ namespace LCDTester
             this.applyHumidity.UseVisualStyleBackColor = false;
             this.applyHumidity.Click += new System.EventHandler(this.applyHumidity_Click);
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 605);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(800, 116);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.panel8.Controls.Add(this.tableLayoutPanel5);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(13, 8);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(1);
+            this.panel8.Size = new System.Drawing.Size(774, 100);
+            this.panel8.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel5.Controls.Add(this.fullONOFF, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.overLoadONOFF, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.errorGB, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(1, 1);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(772, 98);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // errorGB
+            // 
+            this.errorGB.Controls.Add(this.tableLayoutPanel6);
+            this.errorGB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.errorGB.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errorGB.Location = new System.Drawing.Point(8, 8);
+            this.errorGB.Margin = new System.Windows.Forms.Padding(8);
+            this.errorGB.Name = "errorGB";
+            this.errorGB.Size = new System.Drawing.Size(356, 82);
+            this.errorGB.TabIndex = 0;
+            this.errorGB.TabStop = false;
+            this.errorGB.Text = "고장 코드";
+            // 
+            // underZero
+            // 
+            this.underZero.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tempLayout.SetColumnSpan(this.underZero, 2);
+            this.underZero.Location = new System.Drawing.Point(78, 62);
+            this.underZero.Name = "underZero";
+            this.underZero.Padding = new System.Windows.Forms.Padding(1);
+            this.underZero.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.underZero.Size = new System.Drawing.Size(54, 25);
+            this.underZero.TabIndex = 4;
+            this.underZero.Text = "toggleSwitch1";
+            this.underZero.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.applyErrorCode, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.errCodeText, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 25);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(350, 54);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // errCodeText
+            // 
+            this.errCodeText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.errCodeText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errCodeText.Location = new System.Drawing.Point(3, 4);
+            this.errCodeText.Name = "errCodeText";
+            this.errCodeText.Size = new System.Drawing.Size(244, 46);
+            this.errCodeText.TabIndex = 3;
+            this.errCodeText.Text = "0";
+            // 
+            // applyErrorCode
+            // 
+            this.applyErrorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.applyErrorCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.applyErrorCode.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.applyErrorCode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.applyErrorCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applyErrorCode.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.applyErrorCode.ForeColor = System.Drawing.Color.White;
+            this.applyErrorCode.Location = new System.Drawing.Point(253, 3);
+            this.applyErrorCode.Name = "applyErrorCode";
+            this.applyErrorCode.Size = new System.Drawing.Size(94, 48);
+            this.applyErrorCode.TabIndex = 5;
+            this.applyErrorCode.Text = "변경";
+            this.applyErrorCode.UseVisualStyleBackColor = false;
+            this.applyErrorCode.Click += new System.EventHandler(this.applyErrorCode_Click);
+            // 
+            // overLoadONOFF
+            // 
+            this.overLoadONOFF.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.overLoadONOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.overLoadONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overLoadONOFF.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.overLoadONOFF.Location = new System.Drawing.Point(375, 3);
+            this.overLoadONOFF.Name = "overLoadONOFF";
+            this.overLoadONOFF.Size = new System.Drawing.Size(194, 92);
+            this.overLoadONOFF.TabIndex = 4;
+            this.overLoadONOFF.Text = "OVERLOAD OFF";
+            this.overLoadONOFF.UseVisualStyleBackColor = true;
+            this.overLoadONOFF.Click += new System.EventHandler(this.overLoadONOFF_Click);
+            // 
+            // fullONOFF
+            // 
+            this.fullONOFF.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.fullONOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.fullONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fullONOFF.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.fullONOFF.Location = new System.Drawing.Point(575, 3);
+            this.fullONOFF.Name = "fullONOFF";
+            this.fullONOFF.Size = new System.Drawing.Size(194, 92);
+            this.fullONOFF.TabIndex = 5;
+            this.fullONOFF.Text = "FULL OFF";
+            this.fullONOFF.UseVisualStyleBackColor = true;
+            this.fullONOFF.Click += new System.EventHandler(this.fullONOFF_Click);
+            // 
             // LCDTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 895);
+            this.ClientSize = new System.Drawing.Size(800, 980);
+            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.weatherBackgroundPanel);
             this.Controls.Add(this.modeBackgroundPanel);
             this.Controls.Add(this.floorBackgroundPanel);
@@ -1610,6 +1754,12 @@ namespace LCDTester
             this.humGB.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.errorGB.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1714,6 +1864,15 @@ namespace LCDTester
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button weatherIPSet;
         public System.Windows.Forms.TextBox weatherLog;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.GroupBox errorGB;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button applyErrorCode;
+        private System.Windows.Forms.TextBox errCodeText;
+        private System.Windows.Forms.Button fullONOFF;
+        private System.Windows.Forms.Button overLoadONOFF;
     }
 }
 
