@@ -120,6 +120,7 @@ namespace LCDTester
             this.tempText = new System.Windows.Forms.TextBox();
             this.tempUnit = new System.Windows.Forms.Label();
             this.zeroTitle = new System.Windows.Forms.Label();
+            this.underZero = new CustomControls.ToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
             this.humGB = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -129,13 +130,12 @@ namespace LCDTester
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.errorGB = new System.Windows.Forms.GroupBox();
-            this.underZero = new CustomControls.ToggleSwitch();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.errCodeText = new System.Windows.Forms.TextBox();
-            this.applyErrorCode = new System.Windows.Forms.Button();
-            this.overLoadONOFF = new System.Windows.Forms.Button();
             this.fullONOFF = new System.Windows.Forms.Button();
+            this.overLoadONOFF = new System.Windows.Forms.Button();
+            this.errorGB = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.applyErrorCode = new System.Windows.Forms.Button();
+            this.errCodeText = new System.Windows.Forms.TextBox();
             this.ipBackgroundLayout.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1470,6 +1470,19 @@ namespace LCDTester
             this.zeroTitle.Text = "영하";
             this.zeroTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // underZero
+            // 
+            this.underZero.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tempLayout.SetColumnSpan(this.underZero, 2);
+            this.underZero.Location = new System.Drawing.Point(78, 62);
+            this.underZero.Name = "underZero";
+            this.underZero.Padding = new System.Windows.Forms.Padding(1);
+            this.underZero.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
+            this.underZero.Size = new System.Drawing.Size(54, 25);
+            this.underZero.TabIndex = 4;
+            this.underZero.Text = "toggleSwitch1";
+            this.underZero.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -1598,6 +1611,34 @@ namespace LCDTester
             this.tableLayoutPanel5.Size = new System.Drawing.Size(772, 98);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
+            // fullONOFF
+            // 
+            this.fullONOFF.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.fullONOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.fullONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fullONOFF.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.fullONOFF.Location = new System.Drawing.Point(575, 3);
+            this.fullONOFF.Name = "fullONOFF";
+            this.fullONOFF.Size = new System.Drawing.Size(194, 92);
+            this.fullONOFF.TabIndex = 5;
+            this.fullONOFF.Text = "FULL OFF";
+            this.fullONOFF.UseVisualStyleBackColor = true;
+            this.fullONOFF.Click += new System.EventHandler(this.fullONOFF_Click);
+            // 
+            // overLoadONOFF
+            // 
+            this.overLoadONOFF.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.overLoadONOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
+            this.overLoadONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overLoadONOFF.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.overLoadONOFF.Location = new System.Drawing.Point(375, 3);
+            this.overLoadONOFF.Name = "overLoadONOFF";
+            this.overLoadONOFF.Size = new System.Drawing.Size(194, 92);
+            this.overLoadONOFF.TabIndex = 4;
+            this.overLoadONOFF.Text = "OVERLOAD OFF";
+            this.overLoadONOFF.UseVisualStyleBackColor = true;
+            this.overLoadONOFF.Click += new System.EventHandler(this.overLoadONOFF_Click);
+            // 
             // errorGB
             // 
             this.errorGB.Controls.Add(this.tableLayoutPanel6);
@@ -1611,19 +1652,6 @@ namespace LCDTester
             this.errorGB.TabStop = false;
             this.errorGB.Text = "고장 코드";
             // 
-            // underZero
-            // 
-            this.underZero.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tempLayout.SetColumnSpan(this.underZero, 2);
-            this.underZero.Location = new System.Drawing.Point(78, 62);
-            this.underZero.Name = "underZero";
-            this.underZero.Padding = new System.Windows.Forms.Padding(1);
-            this.underZero.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(158)))), ((int)(((byte)(254)))));
-            this.underZero.Size = new System.Drawing.Size(54, 25);
-            this.underZero.TabIndex = 4;
-            this.underZero.Text = "toggleSwitch1";
-            this.underZero.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
@@ -1636,19 +1664,9 @@ namespace LCDTester
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(350, 54);
             this.tableLayoutPanel6.TabIndex = 0;
-            // 
-            // errCodeText
-            // 
-            this.errCodeText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.errCodeText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.errCodeText.Location = new System.Drawing.Point(3, 4);
-            this.errCodeText.Name = "errCodeText";
-            this.errCodeText.Size = new System.Drawing.Size(244, 46);
-            this.errCodeText.TabIndex = 3;
-            this.errCodeText.Text = "0";
             // 
             // applyErrorCode
             // 
@@ -1667,33 +1685,15 @@ namespace LCDTester
             this.applyErrorCode.UseVisualStyleBackColor = false;
             this.applyErrorCode.Click += new System.EventHandler(this.applyErrorCode_Click);
             // 
-            // overLoadONOFF
+            // errCodeText
             // 
-            this.overLoadONOFF.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.overLoadONOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.overLoadONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.overLoadONOFF.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.overLoadONOFF.Location = new System.Drawing.Point(375, 3);
-            this.overLoadONOFF.Name = "overLoadONOFF";
-            this.overLoadONOFF.Size = new System.Drawing.Size(194, 92);
-            this.overLoadONOFF.TabIndex = 4;
-            this.overLoadONOFF.Text = "OVERLOAD OFF";
-            this.overLoadONOFF.UseVisualStyleBackColor = true;
-            this.overLoadONOFF.Click += new System.EventHandler(this.overLoadONOFF_Click);
-            // 
-            // fullONOFF
-            // 
-            this.fullONOFF.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.fullONOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.fullONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fullONOFF.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.fullONOFF.Location = new System.Drawing.Point(575, 3);
-            this.fullONOFF.Name = "fullONOFF";
-            this.fullONOFF.Size = new System.Drawing.Size(194, 92);
-            this.fullONOFF.TabIndex = 5;
-            this.fullONOFF.Text = "FULL OFF";
-            this.fullONOFF.UseVisualStyleBackColor = true;
-            this.fullONOFF.Click += new System.EventHandler(this.fullONOFF_Click);
+            this.errCodeText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.errCodeText.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errCodeText.Location = new System.Drawing.Point(3, 4);
+            this.errCodeText.Name = "errCodeText";
+            this.errCodeText.Size = new System.Drawing.Size(244, 46);
+            this.errCodeText.TabIndex = 3;
+            this.errCodeText.Text = "0";
             // 
             // LCDTester
             // 
