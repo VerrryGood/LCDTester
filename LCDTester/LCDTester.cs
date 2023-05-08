@@ -870,13 +870,13 @@ namespace LCDTester
             {
                 if (errorCode > 255)
                 {
-                    CommonValues.lcdData.crtErrorCode1 = (byte)(errorCode % 256);
-                    CommonValues.lcdData.crtErrorCode2 = (byte)(errorCode / 256);
+                    CommonValues.lcdData.crtErrorCode1 = (byte)(errorCode / 256);
+                    CommonValues.lcdData.crtErrorCode2 = (byte)(errorCode % 256);
                 }
                 else
                 {
-                    CommonValues.lcdData.crtErrorCode1 = 0;
-                    CommonValues.lcdData.crtErrorCode2 = (byte)errorCode;
+                    CommonValues.lcdData.crtErrorCode1 = (byte)errorCode;
+                    CommonValues.lcdData.crtErrorCode2 = 0;
                 }
 
                 testerManager.MakeDatatoByte();
